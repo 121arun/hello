@@ -40,6 +40,50 @@
       z-index:1000 	  
 	}
 
+	#slider {
+		overflow: hidden;
+	} 
+	#slider figure {
+		position: relative;
+		width: 500%;
+		height: 100px;
+		margin: 0;
+		left: 0;
+		animation: 20s slider infinite;
+	}
+	#slider figure img {
+		float: left;
+		width: 20%
+	}
+
+	@keyframes slider {
+		0% {
+		left: 0;
+		}
+		20% {
+		left: 0;
+		}
+		25% {
+		left: -100%;
+		}
+		45% {
+		left: -100%;
+		}
+		50% {
+		left: -200%;
+		}
+		70% {
+		left: -200%;
+		}
+		75% {
+		left: -300%;
+		}	
+	}
+	
+    .center { 
+        text-align-last: center; 
+        border: 2px solid black; 
+    } 
 
 	</style>	
 </head> 
@@ -63,6 +107,7 @@
 		<br> </br>
 		<br> </br>
     <div class="container sections-wrapper">
+	    <h3 style = "text-align:center"> 
         <div class="row">
             <!--div class="primary col-lg-8 col-12"!-->
 		    
@@ -78,26 +123,30 @@
 								<img src="img\Batches\Associate - Additive Manufacturing.png" alt="Image" height="87" width="87">
 								<img src="img\Batches\3DEXPERIENCE Associate - Platform Explorer.png" alt="Image" height="87" width="87">
 <br> </br>
+
+
 							<a class="badge badge-theme" href="#About Me"><i class="fas fa-paper-plane"></i> About Me</a> 
 							<a class="badge badge-theme" href="#projects"><i class="fas fa-paper-plane"></i> Projects</a> 							
 							<a class="badge badge-theme" href="#Experiences"><i class="fas fa-paper-plane"></i> Experiences</a> 
 							<a class="badge badge-theme" href="#Licenses_$_Certifications"><i class="fas fa-paper-plane"></i> Licenses and Certifications</a>  
 							<a class="badge badge-theme" href="#Skills"><i class="fas fa-paper-plane"></i> Skills</a>     								
-
+     
 							</div>	
                     </div><!--//section-inner-->        
 
-					
+</h3>  					
+
                 </section><!--//section-->
 			</div>	
 		</div>	
 		
 
 		</div>	
-	</div>	
-		<br> </br>
-		<br> </br>
-		<br> </br>
+	</div>
+<br></br>
+<br></br>
+<br></br>	
+													
 
     </header><!--//header-->
     
@@ -214,10 +263,81 @@
 										</div>
 									 </div>
 								  </div>								  
-								</div>                         									
+							</div>                         									
                             
                         </div><!--//content-->  
-                    </div><!--//section-inner-->                 
+						
+    <h3 style = "text-align:center"> <a  class="badge badge-warning center"  >Individual Works</a> <br></br> </h3>       
+    <!--div class="center"> 
+        <p> 
+            <font color="green"> 
+                GeeksForGeeks A Computer 
+                Science Portal for Geeks 
+            </font> 
+        </p> 
+    </div!--> 						
+	
+						
+						
+			<div class="container">						
+					<div class="gallery_f_inner row imageGallery1">
+							<!-- Licenses------------------------------------------------------->
+									<div class="col-lg-6 col-md-4 col-sm-4 lic">
+										<div class="h_gallery_item">
+										<div id="slider">
+											<figure>
+												<img src="img/Project/i viz/i viz 4.JPG">
+												<img src="img/Project/i viz/i viz 1.JPG">
+												<img src="img/Project/i viz/i viz 2.JPG">
+												<img src="img/Project/i viz/i viz 3.JPG">
+												<img src="img/Project/i viz/i viz 4.JPG">
+										
+										</div>    									
+											<div class="g_item_text">
+												<p>Surface Design of a Super Car - i Viz</p>
+												<a href="" class="badge badge-theme" target="_blank" ><i class="fas fa-tags"></i> &nbsp;SolidWorks</a>
+												<a href="" class="badge badge-theme" target="_blank" ><i class="fas fa-tags"></i> &nbsp;SolidWorks</a>
+												<a href="" class="badge badge-theme" target="_blank" ><i class="fas fa-expand"></i></a>
+											</div>							
+										</div>
+									</div>
+									<div class="col-lg-6 col-md-2 col-sm-6 lic">
+										<div class="h_gallery_item">
+										<div id="slider">
+											<figure>
+												<img src="img/Project/Rafale/rafale 0.JPG">
+												<img src="img/Project/Rafale/rafale 1.JPG">
+												<img src="img/Project/Rafale/rafale 2.JPG">
+												<img src="img/Project/Rafale/rafale 3.JPG">
+												<img src="img/Project/Rafale/rafale 0.JPG">
+										</div> 
+											<div class="g_item_text">
+												<p>Rafale fighter Jet</p>
+												<a href="" class="badge badge-theme" target="_blank" ><i class="fas fa-tags"></i> &nbsp;SolidWorks</a>
+												<a href="" class="badge badge-theme" target="_blank" ><i class="fas fa-tags"></i> &nbsp;Visualize</a>
+												<a href="" class="badge badge-theme" target="_blank" ><i class="fas fa-expand"></i></a>												
+											
+											</div>							
+										</div>
+									</div>
+									<div class="col-lg-6 col-md-4 col-sm-6 lic">
+										<div class="h_gallery_item">
+										<div id="slider">										
+										<video width = "300" height = "220" controls="" autoplay = "" loop = "" src = "img/Project/Sukhoi Su - 30 MKI/SU-30.mp4" type = "video">
+										</video> 
+									</div> 										
+											<div class="g_item_text">
+												<p>Sukhoi Su - 30 MKI </p>
+												<a href="" class="badge badge-theme" target="_blank" ><i class="fas fa-tags"></i> &nbsp;SolidWorks</a>
+												<a href="" class="badge badge-theme" target="_blank" ><i class="fas fa-expand"></i></a>												
+											
+											</div>							
+										</div>
+									</div>
+								
+                    </div><!--//section-inner-->   
+
+					
                 </section><!--//section-->     
 
                 <section class="experience section colorlib-experience" data-section="experience">
@@ -763,7 +883,7 @@
                         <h2 class="heading" id="Skills" >Skills</h2>
                         <div class="content">
                             <p class="intro">
-                                I have hands on experienced in the following sets of Software tools. I have used these tools throughout my coursework. <br> Please, hover on the &nbsp;<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="Hi..."><i class="fas fa-info-circle"></i></span> to know more.</br></p>
+                                I have hands on experienced in the following sets of Software tools. I have used these tools throughout my coursework.</p>
                             
                             <div class="skillset">
                                
@@ -846,21 +966,21 @@
                                 <li class="item">
                                     <span class="title"><strong>English:</strong></span>
                                     <span class="level">Professional working proficiency <br/  class="year"> </span>
-									<a  class="badge badge-theme"  >Read </a>	
-									<a  class="badge badge-theme"  >Speak </a>
-									<a  class="badge badge-theme"  >Write </a>									
+									<a  class="badge badge-success"  >Read </a>	
+									<a  class="badge badge-warning"  >Speak </a>
+									<a  class="badge badge-info"  >Write </a>									
                                 </li><!--//item-->
                                 <li class="item">
                                     <span class="title"><strong>Tamil:</strong></span>
                                     <span class="level">Native <br/  class="year"> </span>
-									<a  class="badge badge-theme"  >Read </a>	
-									<a  class="badge badge-theme"  >Speak </a>
-									<a  class="badge badge-theme"  >Write </a>									
+									<a  class="badge badge-success"  >Read </a>	
+									<a  class="badge badge-warning"  >Speak </a>
+									<a  class="badge badge-info"  >Write </a>									
                                 </li><!--//item-->
                                 <li class="item">
                                     <span class="title"><strong>Telugu:</strong></span>
                                     <span class="level">Working proficiency <br/  class="year"> </span>
-									<a  class="badge badge-theme"  >Speak </a>									
+									<a  class="badge badge-warning"  >Speak </a>									
                                 </li><!--//item-->								
                             </ul>
                         </div><!--//content-->
@@ -968,4 +1088,4 @@
 	
 	<script src="assets/js/theme.js"></script>		
 </body>
-</html>
+</html> 
