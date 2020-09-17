@@ -1,1169 +1,1900 @@
-<!DOCTYPE html>
-<html lang="en" id="top">
-<head>
-    <title>I am Arun Prasath</title>
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bootstrap 4 Portfolio/Resume Theme for Developers">
-    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
-    <link rel="shortcut icon" href="favicon.ico">  
-    
-    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
-    
-    <!-- FontAwesome JS -->
-    <script defer src="assets/fontawesome/js/all.js"></script>
+/*!   
+ * Template Name: Developer - Portfolio Landing Page Template for Developers
+ * Version: 2.3
+ * Author: Xiaoying Riley
+ * Twitter: @3rdwave_themes
+ * Copyright: 3rd Wave Media Ltd.
+ * Website: https://themes.3rdwavemedia.com/
+*/
+body {
+  font-family: 'Lato', arial, sans-serif;
+  color: #434343;
+  background: #DAE3E7;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-    <!-- Global CSS -->
-    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
-    <link rel="stylesheet" href="assets/css/lightbox.min.css">   
-    <link rel="stylesheet" href="assets/css/screen.css"> 	
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #778492;
+}
 
-    <!-- github calendar css -->
-    <link rel="stylesheet" href="assets/plugins/github-calendar/dist/github-calendar.css">
-    <!-- github activity css -->    
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
-    <link rel="stylesheet" href="assets/plugins/github-activity/github-activity-0.1.5.min.css">    
-    <!-- Theme CSS -->  
-    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
-	<style>
-	div.sticky {
-	  position: -webkit-sticky;
-	  position: sticky;
-	  top: 0;
-	  background-color:#f5f5f5;
-	  padding: 10px;
-	  font-size: 20px;
-      z-index:1000 	  
+a {
+  color: #3AAA64;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #5f6b77;
+  color: #2d844e;
+}
+
+a:focus {
+  text-decoration: none;
+}
+
+.btn, a.btn {
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  font-family: 'Montserrat', arial, sans-serif;
+  padding: 8px 16px;
+  font-weight: bold;
+}
+
+.btn .svg-inline--fa, a.btn .svg-inline--fa {
+  margin-right: 5px;
+  position: relative;
+  top: -2px;
+}
+
+.btn:focus, a.btn:focus {
+  color: #fff;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+a.btn-cta-primary, .btn-cta-primary {
+  background: #54ba4e;
+  border: 1px solid #54ba4e;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+a.btn-cta-primary:hover, .btn-cta-primary:hover {
+  background: #49ac43;
+  border: 1px solid #49ac43;
+  color: #fff;
+}
+
+a.btn-cta-secondary, .btn-cta-secondary {
+  background: #479FC8;
+  border: 1px solid #479FC8;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+a.btn-cta-secondary:hover, a.btn-cta-secondary:not(:disabled):not(.disabled):active:focus, .btn-cta-secondary:hover, .btn-cta-secondary:not(:disabled):not(.disabled):active:focus {
+  background: #3893bd;
+  border: 1px solid #3893bd;
+  color: #fff;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.text-highlight {
+  color: #32383e;
+}
+
+.badge-theme {
+  background: #3AAA64;
+  font-size: 12px;
+  color: #fff;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+
+a.dotted-link {
+  border-bottom: 1px dotted #778492;
+  color: #778492;
+}
+
+a.dotted-link:hover {
+  text-decoration: none;
+  color: #49515a;
+}
+
+/* ======= Header ======= */
+.header {
+  padding: 75px 0;
+  background: #f5f5f5;
+}
+
+.header .btn {
+  margin-top: 60px;
+  font-weight: bold;
+}
+
+.header .profile-image {
+  margin-right: 30px;
+}
+
+.header .profile-content .name {
+  color: #49515a;
+  font-size: 38px;
+  margin-bottom: 5px;
+  margin-top: 30px;
+}
+
+.header .profile-content .desc {
+  color: #778492;
+  font-family: "Lato", arial, sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.header .profile-content .social a {
+  background: #b0b7bf;
+  width: 36px;
+  height: 36px;
+  display: inline-block;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  color: #fff;
+  text-align: center;
+}
+
+.header .profile-content .social a:hover {
+  background: #778492;
+}
+
+.header .profile-content .social a .svg-inline--fa {
+  font-size: 20px;
+  margin-top: 8px;
+}
+
+/* ======= Sections======= */
+.sections-wrapper {
+  padding-top: 12px;
+  padding-bottom: 60px;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.section .section-inner {
+  background: #fff;
+  padding: 30px;
+}
+
+.section .heading {
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: #545e69;
+  font-size: 24px;
+}
+
+.section .content .more-link .svg-inline--fa {
+  margin-right: 5px;
+  font-size: 14px;
+  position: relative;
+  top: -2px;
+}
+
+/* About Section */
+/* Latest Section */
+.latest .item {
+  margin-bottom: 30px;
+}
+
+.latest .item .title {
+  font-size: 18px;
+  margin-top: 0;
+}
+
+.latest .item .title .label {
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+.latest .item .title a {
+  color: #778492;
+}
+
+.latest .item .title a:hover {
+  color: #5f6b77;
+}
+
+.latest .item .project-image:hover {
+  -webkit-opacity: 0.8;
+  -moz-opacity: 0.8;
+  opacity: 0.8;
+}
+
+.latest .divider {
+  margin-bottom: 60px;
+}
+
+.latest .featured {
+  margin-bottom: 60px;
+}
+
+.latest .featured .title {
+  font-size: 20px;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.latest .featured .summary {
+  margin-bottom: 30px;
+  color: #778492;
+}
+
+.latest .featured img {
+  margin-bottom: 30px;
+}
+
+.latest .featured .desc {
+  margin-bottom: 30px;
+}
+
+.latest .has-ribbon {
+  position: relative;
+  display: inline-block;
+}
+
+.latest .has-ribbon .text {
+  background: #3AAA64;
+  color: #fff;
+}
+
+.latest .has-ribbon .ribbon {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 110px;
+  height: 110px;
+  overflow: hidden;
+}
+
+.latest .has-ribbon .ribbon .text {
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  left: -8px;
+  top: 18px;
+  width: 158px;
+  padding: 10px 10px;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #479FC8;
+  -webkit-transform: rotate(45deg) translate3d(0, 0, 0);
+  -moz-transform: rotate(45deg) translate3d(0, 0, 0);
+  -ms-transform: rotate(45deg) translate3d(0, 0, 0);
+  -o-transform: rotate(45deg) translate3d(0, 0, 0);
+}
+
+.latest .has-ribbon .ribbon .text:before, .latest .has-ribbon .ribbon .text:after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  border-top: 5px solid #276582;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+
+.latest .has-ribbon .ribbon .text:before {
+  left: 0;
+}
+
+.latest .has-ribbon .ribbon .text:after {
+  right: 0;
+}
+
+/* Projects Section */
+.projects .item {
+  margin-bottom: 30px;
+}
+
+.projects .item .title {
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 5px;
+  line-height: 1.5;
+}
+
+.projects .item .title a {
+  color: #778492;
+}
+
+.projects .item .title a:hover {
+  color: #5f6b77;
+}
+
+/* Work Section */
+.experience .item {
+  margin-bottom: 30px;
+}
+
+.experience .item .title {
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 5px;
+  line-height: 1.5;
+}
+
+.experience .item .title .place {
+  color: #999;
+  font-weight: normal;
+}
+
+.experience .item .title .place a {
+  color: #999;
+}
+
+.experience .item .title .place a:hover {
+  color: #666666;
+}
+
+.experience .item .title .year {
+  color: #999;
+  font-weight: normal;
+}
+
+/* Git section */
+.github-graph {
+  margin-bottom: 30px;
+}
+
+.github-graph .js-calendar-graph-svg {
+  max-width: 100%;
+}
+
+.github-graph h2 {
+  font-size: 18px;
+}
+
+.ghfeed {
+  height: 500px;
+}
+
+.ghfeed,
+.ghfeed *,
+.ghfeed *:before,
+.ghfeed *:after {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* Info Section */
+.info .svg-inline--fa {
+  margin-right: 15px;
+  color: #ccd1d6;
+}
+
+.info .svg-inline--fa.fa-envelope-o {
+  font-size: 14px;
+}
+
+.info ul {
+  margin-bottom: 0;
+}
+
+.info li {
+  margin-bottom: 15px;
+}
+
+.info li:last-child {
+  margin-bottom: 0;
+}
+
+/* Skills Section */
+.skills .intro {
+  margin-bottom: 30px;
+}
+
+.skills .skillset .item {
+  margin-bottom: 30px;
+}
+
+.skills .skillset .level-title {
+  font-size: 16px;
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 10;
+}
+
+.skills .skillset .level-title .level-label {
+  color: #ccd1d6;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Lato", arial, sans-serif;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.skills .skillset .level-bar {
+  height: 15px;
+  background: #e8e8e8;
+}
+
+.skills .skillset .level-bar-inner {
+  height: 15px;
+  background: #66cb8c;
+}
+
+.skills .svg-inline--fa {
+  margin-right: 3px;
+  position: relative;
+  top: -1px;
+}
+
+/* Testimonials section */
+.testimonials .item {
+  margin-bottom: 30px;
+}
+
+.testimonials .item:last-child {
+  margin-bottom: 0;
+}
+
+.testimonials .item .quote {
+  color: #666;
+  font-size: 16px;
+  border-left: 5px solid #9fdeb7;
+  padding: 5px 15px;
+  margin-bottom: 15px;
+}
+
+.testimonials .item .quote p {
+  margin-bottom: 0;
+}
+
+.testimonials .item .quote .svg-inline--fa {
+  color: #79d19a;
+  margin-right: 15px;
+}
+
+.testimonials .item .source {
+  font-size: 14px;
+  padding-left: 20px;
+  font-weight: 500;
+}
+
+.testimonials .item .source .name {
+  color: #939ea9;
+  font-weight: 600;
+}
+
+.testimonials .item .source .title {
+  color: #999;
+}
+
+/* Education section */
+.education .item {
+  margin-bottom: 30px;
+}
+
+.education .item:last-child {
+  margin-bottom: 0;
+}
+
+.education .item .title {
+  font-size: 16px;
+  margin-top: 0;
+}
+
+.education .item .university {
+  font-family: "Lato", arial, sans-serif;
+  font-size: 13px;
+  color: #999;
+  font-weight: 600;
+  padding-left: 25px;
+}
+
+.education .item .university .year {
+  color: #b0b7bf;
+  font-weight: 500;
+}
+
+/* Language Section */
+.languages .item {
+  margin-bottom: 15px;
+}
+
+.languages .item .title {
+  color: #778492;
+}
+
+.languages .item .level {
+  color: #999;
+}
+
+.languages .item:last-child {
+  margin-bottom: 0;
+}
+
+.languages .item .svg-inline--fa {
+  color: #79d19a;
+}
+
+/* Blog Section */
+.blog .item {
+  margin-bottom: 30px;
+}
+
+.blog .item .title {
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+.blog .item .title a {
+  color: #778492;
+}
+
+.blog .item .title a:hover {
+  color: #5f6b77;
+}
+
+.blog .item p {
+  margin-bottom: 5px;
+}
+
+.blog .item:last-child {
+  margin-bottom: 0;
+}
+
+/* List section */
+.list ul li {
+  margin-bottom: 10px;
+}
+
+.list ul li .svg-inline--fa {
+  margin-right: 5px;
+}
+
+.list ul li a {
+  color: #778492;
+}
+
+.list ul li a:hover {
+  color: #49515a;
+}
+
+/* Credits */
+.credits ul li {
+  margin-bottom: 10px;
+}
+
+.credits ul li .svg-inline--fa {
+  margin-right: 5px;
+  position: relative;
+  top: -2px;
+}
+
+.credits ul li a {
+  color: #778492;
+}
+
+.credits ul li a .svg-inline--fa {
+  color: #b0b7bf;
+}
+
+.credits ul li a:hover {
+  color: #49515a;
+}
+
+.credits .btn {
+  margin-bottom: 15px;
+}
+
+.aside .subheading {
+  font-size: 18px;
+  color: #545e69;
+}
+
+/* ======= Footer ======= */
+.footer {
+  background: #32383e;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.footer .copyright {
+  line-height: 1.6;
+  color: #a1aab4;
+  font-size: 14px;
+}
+
+.footer a {
+  color: #fff;
+}
+
+.footer .fa-heart {
+  color: #fb866a;
+}
+
+@media (max-width: 767.98px) {
+  .header {
+    text-align: center;
+  }
+  .header .profile-image {
+    float: none !important;
+    margin: 0 auto;
+  }
+  .header .profile-content {
+    float: none !important;
+    text-align: center;
+  }
+  .header .btn {
+    margin-top: 30px;
+    float: none !important;
+  }
+  .project-image {
+    margin-bottom: 15px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    width: 1360px;
+    max-width: inherit;
+  }
+}
+
+
+.colorlib-narrow-content {
+  padding: 0 4.5em; }
+  @media screen and (max-width: 878px) {
+    .colorlib-narrow-content {
+        width: 100%;
+      padding: 0 1em; } }
+
+.no-gutters {
+  margin: 0;
+  padding: 0; }
+
+.colorlib-experience,
+.colorlib-skills,
+.colorlib-education,
+.colorlib-blog,
+.colorlib-work,
+.colorlib-about,
+.colorlib-installation,
+.colorlib-services,
+.colorlib-footer,
+.colorlib-contact{
+  padding-top: 0em;
+  padding-bottom: 0em;
+  clear: both;
+  width: 100%;
+  display: block; }
+  @media screen and (max-width: 768px) {
+    .colorlib-experience,
+    .colorlib-skills,
+    .colorlib-education,
+    .colorlib-blog,
+    .colorlib-work,
+    .colorlib-about,
+    .colorlib-installation,
+    .colorlib-services,
+      .colorlib-contact{
+      padding-top: 2em;
+      padding-bottom: 0em; } }
+
+
+.about-desc h3 {
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: 500; }
+
+.about-desc h1 {
+  font-size: 38px;
+  font-weight: 400;
+font-family: "Montserrat", Georgia, serif;}
+
+
+.timeline-centered {
+  position: relative;
+  margin-bottom: 30px; }
+
+.timeline-centered:before, .timeline-centered:after {
+  content: " ";
+  display: table; }
+
+.timeline-centered:after {
+  clear: both; }
+
+.timeline-centered:before, .timeline-centered:after {
+  content: " ";
+  display: table; }
+
+.timeline-centered:after {
+  clear: both; }
+
+.timeline-centered:before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 4px;
+  background: #f9bf3f;
+  top: 20px;
+  bottom: 20px;
+  margin-left: 29px; }
+
+.timeline-centered .timeline-entry {
+  position: relative;
+  margin-top: 5px;
+  margin-left: 30px;
+  margin-bottom: 10px;
+  clear: both; }
+
+.timeline-centered .timeline-entry .timeline-entry-inner {
+  position: relative;
+  margin-left: -20px; }
+
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: #2c98f0;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  text-align: center;
+  -moz-box-shadow: 0 0 0 5px #f2f3f7;
+  -webkit-box-shadow: 0 0 0 5px #f2f3f7;
+  box-shadow: 0 0 0 5px #f2f3f7;
+  line-height: 40px;
+  float: left; }
+  .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon i {
+    color: #fff; }
+  .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.color-2 {
+    background: #ec5453; }
+  .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.color-3 {
+    background: #e6ffff; }
+  .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.color-4 {
+    background: #a84cb8; }
+  .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.color-5 {
+    background: #2fa499; }
+  .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.color-none {
+    background: #fff;
+    width: 20px;
+    height: 20px;
+    margin-left: 10px; }
+
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label {
+  position: relative;
+  background: #fcde9c;
+  padding: 1.5em;
+  margin-left: 60px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box; }
+
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 9px 9px 9px 0;
+  border-color: transparent #f2f3f7 transparent transparent;
+  left: 0;
+  top: 10px;
+  margin-left: -9px; }
+
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label p + p {
+  margin-top: 15px; }
+
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label h2 {
+  font-size: 20px;
+  font-family: "Quicksand", Arial, sans-serif;
+  font-weight: 500; }
+
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label h2 a {
+  color: #000; }
+
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label h2 span {
+  -webkit-opacity: .4;
+  -moz-opacity: .4;
+  opacity: .4;
+  -ms-filter: alpha(opacity=40);
+  filter: alpha(opacity=40);
+  font-size: 16px; }
+  
+  
+@-webkit-keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    /*-webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);*/
+    -webkit-transform: translate3d(-50px, 0, 0);
+    transform: translate3d(-50px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    /*-webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);*/
+    -webkit-transform: translate3d(-50px, 0, 0);
+    transform: translate3d(-50px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+}
+
+@-webkit-keyframes fadeInLeftBig {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-2000px, 0, 0);
+    transform: translate3d(-2000px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInLeftBig {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-2000px, 0, 0);
+    transform: translate3d(-2000px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInLeftBig {
+  -webkit-animation-name: fadeInLeftBig;
+  animation-name: fadeInLeftBig;
+}
+
+
+.js .animate-box {
+  opacity: 0; }
+
+
+
+	
+.main_title {
+  text-align: center;
+  max-width: 670px;
+  margin: 0px auto 75px; }
+  .main_title h2 {
+    font-family: "Heebo", sans-serif;
+    font-size: 36px;
+    color: #222222;
+    margin-bottom: 15px;
+    text-transform: uppercase; }
+  .main_title p {
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+    line-height: 26px;
+    color: #777777;
+    margin-bottom: 0px; }
+	
+/* Gallery Area css
+============================================================================================ */
+.isotope_fillter {
+  margin-bottom: 50px; }
+  .isotope_fillter .gallery_filter {
+    text-align: center; }
+    .isotope_fillter .gallery_filter li {
+      display: inline-block;
+      margin-right: 45px; }
+      .isotope_fillter .gallery_filter li:last-child {
+        margin-right: 0px; }
+      .isotope_fillter .gallery_filter li a {
+        font-size: 12px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        color: #222222;
+        transition: all 300ms linear 0s;
+        text-transform: uppercase; }
+      .isotope_fillter .gallery_filter li:hover a, .isotope_fillter .gallery_filter li.active a {
+        color: #766dff; }
+
+.gallery_f_inner {
+  margin-bottom: -45px; }
+
+.h_gallery_item {
+  display: inline-block;
+  margin-bottom: 45px; }
+  .h_gallery_item .g_img_item {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 5px; }
+    .h_gallery_item .g_img_item:before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      left: 0px;
+      top: 0px;
+      background-image: -moz-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
+      background-image: -webkit-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
+      background-image: -ms-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
+      position: absolute;
+      opacity: 0;
+      transition: all 300ms ease; }
+    .h_gallery_item .g_img_item .light {
+      position: absolute;
+      left: 0px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      text-align: center;
+      opacity: 0; }
+  .h_gallery_item .g_item_text {
+    text-align: center; }
+    .h_gallery_item .g_item_text h4 {
+      color: #222222;
+      font-size: 21px;
+      margin-top: 22px;
+      transition: all 300ms linear 0s; }
+    .h_gallery_item .g_item_text p {
+      margin-bottom: 0px; }
+  .h_gallery_item:hover .g_img_item:before {
+    opacity: .85; }
+  .h_gallery_item:hover .g_img_item .light {
+    opacity: 1; }
+  .h_gallery_item:hover .g_item_text h4:hover {
+    color: #766dff; }
+
+.more_btn {
+  text-align: center;
+  margin-top: 80px; }
+
+/* End Gallery Area css
+============================================================================================ */
+/*---------------------------------------------------- */
+
+/*==============Elements Button Area css ================*/
+.elements_button{
+	.title_color{
+		margin-bottom: 30px;
+		color: $dip;
 	}
+}
+.title_color{
+	color: $dip;
+}
+.button-group-area{
+	margin-top: 15px;
+	&:nth-child(odd){
+		margin-top: 40px;
+	}
+	&:first-child{
+		margin-top: 0px;
+	}
+	.theme_btn{
+		margin-right: 10px;
+	}
+	.white_btn{
+		margin-right: 10px;
+	}
+	.link{
+		text-decoration: underline;
+		color: $dip;
+		background: transparent;
+		&:hover{
+			color: #fff;
+		}
+	}
+	.disable{
+		background: transparent;
+		color: #007bff;
+		cursor: not-allowed;
+		&:before{
+			display: none;
+		}
+	}
+}
+/*.primary{
+	background: #52c5fd;
+	&:before{
+		background: #2faae6;
+	}
+}
+*/
+.success{
+	background: #4cd3e3;
+	&:before{
+		background: #2ebccd;
+	}
+}
+.info{
+	background: #38a4ff;
+	&:before{
+		background: #298cdf;
+	}
+}
+.warning{
+	background: #f4e700;
+	&:before{
+		background: #e1d608;
+	}
+}
+.danger{
+	background: #f54940;
+	&:before{
+		background: #e13b33;
+	}
+}
+.border_btn{
+	
+}
+.primary-border{
+	background: transparent;
+	border: 1px solid #52c5fd;
+	color: #52c5fd;
+	&:before{
+		background: #52c5fd;
+	}
+}
+.success-border{
+	background: transparent;
+	border: 1px solid #4cd3e3;
+	color: #4cd3e3;
+	&:before{
+		background: #4cd3e3;
+	}
+}
+.info-border{
+	background: transparent;
+	border: 1px solid #38a4ff;
+	color: #38a4ff;
+	&:before{
+		background: #38a4ff;
+	}
+}
+.warning-border{
+	background: #fff;
+	border: 1px solid #f4e700;
+	color: #f4e700;
+	&:before{
+		background: #f4e700;
+	}
+}
+.danger-border{
+	background: transparent;
+	border: 1px solid #f54940;
+	color: #f54940;
+	&:before{
+		background: #f54940;
+	}
+}
+.link-border{
+	background: transparent;
+	border: 1px solid $baseColor;
+	color: $baseColor;
+	&:before{
+		background: $baseColor;
+	}
+}
+.radius{
+	border-radius: 3px;
+}
+.circle{
+	border-radius: 20px;
+}
+.arrow{
+	span{
+		padding-left: 5px;
+	}
+}
+.e-large{
+	line-height: 50px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+.large{
+	line-height: 45px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+.medium{
+	line-height: 30px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+.small{
+	line-height: 25px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+.general{
+	line-height: 38px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+/*==============End Elements Button Area css ================*/
+.gallery{
+	margin: 10px 50px;
+}
 
-	#slider {
-		overflow: hidden;
-	} 
-	#slider figure {
+.gallery img {
+	transition: 1s;
+	padding: 15px;
+	width: 200px;
+}
+
+.gallery img:hover {
+	filter: greyscale(100%);
+	transform:scale(1:1)
+}
+
+/*==============================*/
+
+
+/* Add a light grey background on mouse-over */
+.btn:hover {
+  background-color: #71c66c;
+}
+
+/* Add a dark background to the active button */
+.btn.active {
+  background-color: #666;
+  color: white;
+}	
+
+
+/* Reservation Form Area css
+============================================================================================ */
+.reservation_form_area{
+	.res_form_inner{
+		max-width: 555px;
+		margin: auto;
+		box-shadow: 0px 10px 30px 0px rgba(153, 153, 153, 0.1);
+		padding: 75px 50px;
 		position: relative;
-		width: 500%;
-		height: 100px;
-		margin: 0;
-		left: 0;
-		animation: 20s slider infinite;
+		&:before{
+			content: "";
+			background: url(../img/contact-shap-1.png);
+			position: absolute;
+			left: -125px;
+			height: 421px;
+			width: 98px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		&:after{
+			content: "";
+			background: url(../img/contact-shap-2.png);
+			position: absolute;
+			right: -125px;
+			height: 421px;
+			width: 98px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
 	}
-	#slider figure img {
-		float: left;
-		width: 20%
+}
+.reservation_form{
+	.form-group{
+		input{
+			height: 40px;
+			border-radius: 0px;
+			border: 1px solid #eeeeee;
+			outline: none;
+			box-shadow: none;
+			padding: 0px 15px;
+			font-size: 13px;
+			font-family: $rob;
+			font-weight: 300;
+			color: #999999;
+			@include placeholder{
+				font-size: 13px;
+				font-family: $rob;
+				font-weight: 300;
+				color: #999999;
+			}
+		}
+		.res_select{
+			height: 40px;
+			border: 1px solid #eeeeee;
+			border-radius: 0px;
+			width: 100%;
+			padding: 0px 15px;
+			line-height: 36px;
+			.current{
+				font-size: 13px;
+				font-family: $rob;
+				font-weight: 300;
+				color: #999999;
+			}
+			&:after{
+				content: "\e874";
+				font-family: 'Linearicons-Free';
+				color: #cccccc;
+				transform: rotate(0deg);
+				border: none;
+				margin-top: -17px;
+				font-size: 13px;
+				right: 22px;
+			}
+		}
+		&:last-child{
+			text-align: center;
+		}
 	}
-	@keyframes slider {
-		0% {
-		left: 0;
+}
+/* End Reservation Form Area css
+============================================================================================ */
+
+
+/*============== contact_area css ================*/
+.contact_area{}
+.mapBox{
+    height: 420px;
+    margin-bottom: 80px;
+}
+.contact_info{
+    .info_item{
+        position: relative;
+        padding-left: 45px;
+        i{
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 20px;
+            line-height: 24px;
+            color: $baseColor;
+            font-weight: 600;
+        }
+        h6{
+            font-size: 16px;
+            line-height: 24px;
+            color: $rob;
+            font-weight: bold;
+            margin-bottom: 0px;
+			color: $dip;
+            a{
+                color: $dip;
+            }
+        }
+        p{
+            font-size: 14px;
+            line-height: 24px;
+            padding: 2px 0px;
+        }
+    }
+}
+.contact_form{
+    .form-group{
+        margin-bottom: 10px;
+        .form-control{
+            font-size: 13px;
+            line-height: 26px;
+            color: #999;
+            border: 1px solid #eeeeee;
+            font-family: $rob;
+            border-radius: 0px;
+            padding-left: 20px;
+            &:focus{
+                box-shadow: none;
+                outline: none;
+            }
+            @include placeholder{
+                color: #999;
+            }
+        }
+        textarea{
+			resize: none;
+            &.form-control{
+                height: 140px;
+            }
+        }
+    }
+    .submit_btn{
+        margin-top: 20px;
+        cursor: pointer;
+    }
+}
+
+
+/* Contact Success and error Area css
+============================================================================================ */
+.modal-message{
+    .modal-dialog{
+        position: absolute;
+        top: 36%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%) !important; 
+        margin: 0px;
+        max-width: 500px;
+        width: 100%;
+        .modal-content{
+            .modal-header{
+                text-align: center;
+                display: block;
+                border-bottom: none;
+                padding-top: 50px;
+                padding-bottom: 50px; 
+                .close{
+                    position: absolute;
+                    right: -15px;
+                    top: -15px;
+                    padding: 0px;
+                    color: #fff;
+                    opacity: 1;
+                    cursor: pointer;
+                }
+                h2{
+                    display: block;
+                    text-align: center;
+                    color: $baseColor;
+                    padding-bottom: 10px;
+					font-family: $rob;
+                }
+                p{
+                    display: block;
+                }
+            }
+        }
+    }
+}
+/* End Contact Success and error Area css
+============================================================================================ */
+
+
+/* Gallery Area css
+============================================================================================ */
+.home_gallery_area{
+	
+}
+.isotope_fillter{
+	margin-bottom: 50px;
+	.gallery_filter{
+		text-align: center;
+		li{
+			display: inline-block;
+			margin-right: 45px;
+			&:last-child{
+				margin-right: 0px;
+			}
+			a{
+				font-size: 12px;
+				font-family: $rob;
+				font-weight: 500;
+				color: $dip;
+				@include transition;
+				text-transform: uppercase;
+			}
+			&:hover, &.active{
+				a{
+					color: $baseColor;
+				}
+			}
 		}
-		20% {
-		left: 0;
-		}
-		25% {
-		left: -100%;
-		}
-		45% {
-		left: -100%;
-		}
-		50% {
-		left: -200%;
-		}
-		70% {
-		left: -200%;
-		}
-		75% {
-		left: -300%;
-		}	
 	}
-	
-	
-    .center { 
-        text-align-last: center; 
-        border: 2px solid black; 
-    } 
+}
+.gallery_f_inner{
+	margin-bottom: -45px;
+}
+.h_gallery_item{
+	display: inline-block;
+	margin-bottom: 45px;
+	.g_img_item{
+		position: relative;
+		text-align: center;
+		overflow: hidden;
+		border-radius: 5px;
+		&:before{
+			content: "";
+			width: 100%;
+			height: 100%;
+			left: 0px;
+			top: 0px;
+			background-image: -moz-linear-gradient( 0deg, rgb(118,109,255) 0%, rgb(136,243,255) 100%);
+			background-image: -webkit-linear-gradient( 0deg, rgb(118,109,255) 0%, rgb(136,243,255) 100%);
+			background-image: -ms-linear-gradient( 0deg, rgb(118,109,255) 0%, rgb(136,243,255) 100%);
+			position: absolute;
+			opacity: 0;
+			transition: all 300ms ease;
+		}
+		.light{
+			position: absolute;
+			left: 0px;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 100%;
+			text-align: center;
+			opacity: 0;
+		}
+	}
+	.g_item_text{
+		text-align: center;
+		h4{
+			color: $dip;
+			font-size: 21px;
+			margin-top: 22px;
+			@include transition;
+		}
+		p{
+			margin-bottom: 0px;
+		}
+	}
+	&:hover{
+		.g_img_item{
+			&:before{
+				opacity: .85;
+			}
+			.light{
+				opacity: 1;
+			}
+		}
+		.g_item_text{
+			h4{
+				&:hover{
+					color: $baseColor;
+				}
+			}	
+		}
+	}
+}
+.more_btn{
+	text-align: center;
+	margin-top: 80px;
+}
+/* End Gallery Area css
+============================================================================================ */
+div.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: yellow;
+  padding: 10px;
+  font-size: 20px;
+}
+/* Slider Area css*/
+/**
+ *
+ * slippry v1.4.0 - Responsive content slider for jQuery
+ * http://slippry.com
+ *
+ * Authors: Lukas Jakob Hafner - @saftsaak
+ *          Thomas Hurd - @SeenNotHurd
+ *
+ * Copyright 2016, booncon oy - http://booncon.com
+ *
+ *
+ * Released under the MIT license - http://opensource.org/licenses/MIT
+ */
+/* kenBurns animations, very basic */
+@-webkit-keyframes left-right {
+  0% {
+    -webkit-transform: translateY(-20%) translateX(-10%);
+            transform: translateY(-20%) translateX(-10%); }
+  100% {
+    -webkit-transform: translateY(0%) translateX(10%);
+            transform: translateY(0%) translateX(10%); } }
+@-o-keyframes left-right {
+  0% {
+    -o-transform: translateY(-20%) translateX(-10%);
+       transform: translateY(-20%) translateX(-10%); }
+  100% {
+    -o-transform: translateY(0%) translateX(10%);
+       transform: translateY(0%) translateX(10%); } }
+@keyframes left-right {
+  0% {
+    -webkit-transform: translateY(-20%) translateX(-10%);
+         -o-transform: translateY(-20%) translateX(-10%);
+            transform: translateY(-20%) translateX(-10%); }
+  100% {
+    -webkit-transform: translateY(0%) translateX(10%);
+         -o-transform: translateY(0%) translateX(10%);
+            transform: translateY(0%) translateX(10%); } }
+@-webkit-keyframes right-left {
+  0% {
+    -webkit-transform: translateY(0%) translateX(10%);
+            transform: translateY(0%) translateX(10%); }
+  100% {
+    -webkit-transform: translateY(-20%) translateX(-10%);
+            transform: translateY(-20%) translateX(-10%); } }
+@-o-keyframes right-left {
+  0% {
+    -o-transform: translateY(0%) translateX(10%);
+       transform: translateY(0%) translateX(10%); }
+  100% {
+    -o-transform: translateY(-20%) translateX(-10%);
+       transform: translateY(-20%) translateX(-10%); } }
+@keyframes right-left {
+  0% {
+    -webkit-transform: translateY(0%) translateX(10%);
+         -o-transform: translateY(0%) translateX(10%);
+            transform: translateY(0%) translateX(10%); }
+  100% {
+    -webkit-transform: translateY(-20%) translateX(-10%);
+         -o-transform: translateY(-20%) translateX(-10%);
+            transform: translateY(-20%) translateX(-10%); } }
+/* added to the original element calling slippry */
+.sy-box.sy-loading {
+  background: url("/images/sy-loader.gif") 50% 50% no-repeat;
+  -webkit-background-size: 32px 32px;
+          background-size: 32px;
+  min-height: 40px; }
+  .sy-box.sy-loading .sy-slides-wrap, .sy-box.sy-loading .sy-pager {
+    visibility: hidden; }
 
-	
-    .center { 
-        text-align-last: center; 
-        border: 2px solid black; 
-    } 
+/* element that wraps the slides */
+.sy-slides-wrap {
+  position: relative;
+  height: 100%;
+  width: 100%; }
+  .sy-slides-wrap:hover .sy-controls {
+    display: block; }
 
-	</style>	
-</head> 
+/* element that crops the visible area to the slides */
+.sy-slides-crop {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow: hidden; }
 
-<body>
-    <!-- ******HEADER****** --> 
-    <header class="header" >
-        <div class="container clearfix">                       
-            <img class="profile-image img-fluid float-left rounded-circle" src="img/arun.png" alt="profile image" />
-            <div class="profile-content float-left">		
-                <h1 class="name">Arun Prasath M</h1>
-                <h2 class="desc">Mechanical Engineering Student</h2>   
-                <ul class="social list-inline">
-                    <li class="list-inline-item"><a href="https://www.linkedin.com/in/arunprasathm/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>		
-                </ul> 		
-            </div><!--//profile-->
-            <a class="btn btn-cta-primary float-right" href="#Contact_Me"><i class="fas fa-paper-plane"></i> Contact</a> 
-        <!--//container-->
-		</div><!--//section-inner-->        
-		
-		<br> </br>
-		<br> </br>
-    <div class="container sections-wrapper">
-	    <h3 style = "text-align:center"> 
-        <div class="row">
-            <!--div class="primary col-lg-8 col-12"!-->
-		    
-                <section class="about section">
-                    <div class="section-inner shadow-sm rounded">
-							<div class="nav-inner nav-inner-most">
-								<img src="img\Batches\Professional - Mechanical Design.png" alt="Image" height="87" width="87">
-								<img src="img\Batches\Associate - Mechanical Design.png" alt="Image" height="87" width="87">
-								<img src="img\Batches\Professional - Surfacing.png" alt="Image" height="87" width="87">
-								<img src="img\Batches\Professional - Drawing Tools.png" alt="Image" height="87" width="87">
-								<img src="img\Batches\Professional - Sheet Metal.png" alt="Image" height="87" width="87">
-								<img src="img\Batches\Professional - Weldments.png" alt="Image" height="87" width="87">
-								<img src="img\Batches\Associate - Additive Manufacturing.png" alt="Image" height="87" width="87">
-								<img src="img\Batches\3DEXPERIENCE Associate - Platform Explorer.png" alt="Image" height="87" width="87">
-<br> </br>
+/* list containing the slides */
+.sy-list {
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute; }
+  .sy-list.horizontal {
+    -webkit-transition: left ease;
+         -o-transition: left ease;
+            transition: left ease; }
+  .sy-list.vertical {
+    -webkit-transition: top ease;
+         -o-transition: top ease;
+            transition: top ease; }
 
+/* single slide */
+.sy-slide {
+  position: absolute;
+  width: 100%;
+  z-index: 2; }
+  .sy-slide.kenburns {
+    width: 140%;
+    left: -20%; }
+    .sy-slide.kenburns.useCSS {
+      -webkit-transition-property: opacity;
+           -o-transition-property: opacity;
+              transition-property: opacity; }
+      .sy-slide.kenburns.useCSS.sy-ken:nth-child(1n) {
+        -webkit-animation-name: left-right;
+             -o-animation-name: left-right;
+                animation-name: left-right;
+        -webkit-animation-fill-mode: forwards;
+             -o-animation-fill-mode: forwards;
+                animation-fill-mode: forwards; }
+      .sy-slide.kenburns.useCSS.sy-ken:nth-child(2n) {
+        -webkit-animation-name: right-left;
+             -o-animation-name: right-left;
+                animation-name: right-left;
+        -webkit-animation-fill-mode: forwards;
+             -o-animation-fill-mode: forwards;
+                animation-fill-mode: forwards; }
+  .sy-slide.sy-active {
+    z-index: 3; }
+  .sy-slide > img {
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: 100%;
+    border: 0; }
+  .sy-slide > a {
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: 100%; }
+    .sy-slide > a > img {
+      margin: 0;
+      padding: 0;
+      display: block;
+      width: 100%;
+      border: 0; }
 
-							<a class="badge badge-theme" href="#About Me"><i class="fas fa-paper-plane"></i> About Me</a> 
-							<a class="badge badge-theme" href="#projects"><i class="fas fa-paper-plane"></i> Projects</a> 							
-							<a class="badge badge-theme" href="#Experiences"><i class="fas fa-paper-plane"></i> Experiences</a> 
-							<a class="badge badge-theme" href="#Licenses_$_Certifications"><i class="fas fa-paper-plane"></i> Licenses and Certifications</a>  
-							<a class="badge badge-theme" href="#Skills"><i class="fas fa-paper-plane"></i> Skills</a>     								
-     
-							</div>	
-                    </div><!--//section-inner-->        
+/* next/ prev buttons, with arrows and clickable area a lot larger than the visible buttons */
+.sy-controls {
+  display: none;
+  list-style: none;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  padding: 0;
+  margin: 0; }
+  .sy-controls li {
+    position: absolute;
+    width: 10%;
+    min-width: 4.2em;
+    height: 100%;
+    z-index: 33; }
+    .sy-controls li.sy-prev {
+      left: 0;
+      top: 0; }
+      .sy-controls li.sy-prev a:after {
+        background-position: -5% 0; }
+    .sy-controls li.sy-next {
+      right: 0;
+      top: 0; }
+      .sy-controls li.sy-next a:after {
+        background-position: 105% 0; }
+    .sy-controls li a {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: block;
+      text-indent: -9999px; }
+      .sy-controls li a:link, .sy-controls li a:visited {
+        opacity: 0.4; }
+      .sy-controls li a:hover, .sy-controls li a:focus {
+        opacity: 0.8;
+        outline: none; }
+      .sy-controls li a:after {
+        content: "";
+        background-image: url("/images/arrows.svg");
+        background-repeat: no-repeat;
+        -webkit-background-size: cover;
+                background-size: cover;
+        text-align: center;
+        text-indent: 0;
+        line-height: 2.8em;
+        color: #111;
+        font-weight: 800;
+        position: absolute;
+        background-color: #fff;
+        width: 2.8em;
+        height: 2.8em;
+        left: 50%;
+        top: 50%;
+        margin-top: -1.4em;
+        margin-left: -1.4em;
+        border-radius: 50%; }
+  @media only screen and (max-device-width: 600px) {
+    .sy-controls {
+      display: block; }
+      .sy-controls li {
+        min-width: 2.1em; }
+        .sy-controls li a:after {
+          width: 1.4em;
+          height: 1.4em;
+          margin-top: -0.7em;
+          margin-left: -0.7em; } }
 
-</h3>  					
+/* captions, styled fo the overlay variant */
+.sy-caption-wrap {
+  position: absolute;
+  bottom: 2em;
+  z-index: 12;
+  left: 50%; }
+  .sy-caption-wrap .sy-caption {
+    position: relative;
+    left: -50%;
+    background-color: rgba(0, 0, 0, 0.54);
+    color: #fff;
+    padding: 0.4em 1em;
+    border-radius: 1.2em; }
+    .sy-caption-wrap .sy-caption a:link, .sy-caption-wrap .sy-caption a:visited {
+      color: #e24b70;
+      font-weight: 600;
+      text-decoration: none; }
+    .sy-caption-wrap .sy-caption a:hover, .sy-caption-wrap .sy-caption a:focus {
+      text-decoration: underline; }
+  @media only screen and (max-device-width: 600px), screen and (max-width: 600px) {
+    .sy-caption-wrap {
+      left: 0;
+      bottom: 0.4em; }
+      .sy-caption-wrap .sy-caption {
+        left: 0;
+        padding: 0.2em 0.4em;
+        font-size: 0.92em;
+        border-radius: 0; } }
 
-                </section><!--//section-->
-			</div>	
-		</div>	
-		
+/* pager bubbles */
+.sy-pager {
+  clear: both;
+  display: block;
+  width: 100%;
+  margin: 1em 0 0;
+  padding: 0;
+  list-style: none;
+  text-align: center; }
+  .sy-pager li {
+    display: inline-block;
+    width: 1.2em;
+    height: 1.2em;
+    margin: 0 1em 0 0;
+    border-radius: 50%; }
+    .sy-pager li.sy-active a {
+      background-color: #e24b70; }
+    .sy-pager li a {
+      width: 20%;
+      height: 10%;
+      display: block;
+      background-color: #ccc;
+      text-indent: -9999px;
+      -webkit-background-size: 2em 2em;
+              background-size: 2em;
+      border-radius: 50%; }
+      .sy-pager li a:link, .sy-pager li a:visited {
+        opacity: 1.0; }
+      .sy-pager li a:hover, .sy-pager li a:focus {
+        opacity: 0.6; }
 
-		</div>	
-	</div>
-<br></br>
-<br></br>
-<br></br>	
-													
-
-    </header><!--//header-->
-    
-    <div class="container sections-wrapper">
-        <div class="row">
-            <div class="primary col-lg-8 col-12">
-		      
-		    
-                <section class="about section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading"id="About Me">About Me</h2>
-                        <div class="content">
-                            <p>Pursuing B.Tech. Third-year Mechanical Engineering. Passionate about Numerical Analysis and creative insight into the development of engineering projects. Proficient in using CAD Softwares like SolidWorks, Solid Edge, proE and Analyzing Sofwares like Hyper Mesh and Ansys. Interested in Computational Fluid Dynamics and Finite Element Analysis.</p>
-                            <p>I'm a Certified SolidWorks Professional and I've qualified for CSWE. I've achieved this through completing the previous levels of certifications.</p>
-							<a class="badge badge-theme" href="#projects"><i class="fas fa-paper-plane"></i> Projects</a> 
-							<a class="badge badge-theme" href="#Licenses_$_Certifications"><i class="fas fa-paper-plane"></i> Licenses and Certifications</a>  
-							<a class="badge badge-theme" href="#Skills"><i class="fas fa-paper-plane"></i> Skills</a>                   
-							<a class="badge badge-theme" href="#Contact_Me"><i class="fas fa-paper-plane"></i> Contact</a>  								
-                        </div><!--//content-->
-                    </div><!--//section-inner-->        
-
-					
-                </section><!--//section-->
-
-    
-               <section class="latest section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading" id="projects">Latest Projects</h2>
-                        <div class="content">    
-                                               
-                            <div class="item featured text-center">
-                                
-                                <div class="featured-image has-ribbon">
-                                    <img class="img-fluid project-image rounded shadow-sm" src="img\Project\Syr-pump-sw.JPG" alt="project name" />
-                                    </a>
-                                    <div class="ribbon">
-                                        <div class="text">New</div>
-                                    </div>
-                                </div>
-                                
-                                <h3 class="title mb-3"><a href="img\Project\Syr-pump-sw.JPG" target="_blank">Design and fabrication of a syringe pumb</a></h3>
-                                    
-                                <div class="desc text-left">                                    
-                                    <p>Designing and fabricating a syringe pump to deliver required flow rate of a given fluid and to mix multiple fluids at aproportionate rate. This pump is capable of metering a limited volume of fluid through medical syringes at a low level ofdosage error.</p>
-                                </div><!--//desc-->         
-                                <a class="badge badge-theme" href="#Contact_Me"><i class="fas fa-thumbs-up"></i> Support</a>                 
-    <!--                       </div><!--//item-->
-    <!--                        <hr class="divider" />
-                            <div class="item row">
-                                <a class="col-md-4 col-12" href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/coderpro-bootstrap-4-startup-template-for-software-projects/" target="_blank">
-                                <img class="img-fluid project-image rounded shadow-sm" src="assets/images/projects/project-1.png" alt="project name" />
-                                </a>
-                                <div class="desc col-md-8 col-12">
-                                    <h3 class="title"><a href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/coderpro-bootstrap-4-startup-template-for-software-projects/" target="_blank">CoderPro - Bootstrap 4 Startup Template For Software Projects</a></h3>
-                                    <p class="mb-2">You can put one of your secondary projects here. Suspendisse in tellus dolor. Vivamus a tortor eu turpis pharetra consequat quis non metus. Aliquam aliquam, orci eu suscipit pellentesque, mauris dui tincidunt enim, eget iaculis ante dolor non turpis.</p>
-                                    <p><a class="more-link" href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/coderpro-bootstrap-4-startup-template-for-software-projects/" target="_blank"><i class="fas fa-external-link-alt"></i>Find out more</a></p>
-                                </div><!--//desc-->                          
-          <!--                  </div><!--//item-->                            
-                        </div><!--//content-->  
-						
-						
-                    </div><!--//section-inner-->                
-                </section><!--//section-->
-                
-  <!--              <section class="projects section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Other Projects</h2>
-                        <div class="content">
-                            <div class="item">
-                                <h3 class="title"><a href="https://themes.3rdwavemedia.com/bootstrap-templates/resume/free-bootstrap4-resume-cv-template-for-developers-pillar/" target="_blank">Pillar - Free Bootstrap 4 Resume/CV Template for Developers</a> <span class="badge badge-theme">Free</span></h3>
-                                <p class="summary">Provide a brief description of your project. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatu.</p>
-                                <p><a class="more-link" href="https://themes.3rdwavemedia.com/bootstrap-templates/resume/free-bootstrap4-resume-cv-template-for-developers-pillar/" target="_blank"><i class="fas fa-external-link-alt"></i>Download Now</a></p>
-                            </div><!--//item-->
-   <!--                         <a class="badge badge-theme" href="#">More on GitHub <i class="fas fa-chevron-right pt-1"></i></a>
-                            
-                        </div><!--//content-->  
-    <!--                </div><!--//section-inner-->                 
-    <!--            </section><!--//section-->
-                <section class="experience section colorlib-experience" data-section="experience">
-                    <div class="section-inner shadow-sm rounded">
-						<div class="row">
-							<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-								<div class="about-desc">
-								<h2 class="heading">Projects</h2>
-								</div>
-							</div>
-						</div>
-                        <div class="content row">
-							<div class="col-md-12">
-							   <div class="timeline-centered">
-									<article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
-									 <div class="timeline-entry-inner">
-										<div class="timeline-icon color-1">
-											<i class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="Jan 2020 - present"><i class="fas fa-edit"></i> </i>
-										</div>
-										<div class="timeline-label level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="Jan 2020 - present">
-										   <h2>Design and fabrication of a syringe pumb</h2>
-										   <p><strong>Guided by, Dr. Surfarazusshain Hulkarni, Assistant Professor, Department of Mechanical Engineering, SRM University - AP</strong><br>Designing and fabricating a syringe pump to deliver required flow rate of a given fluid and to mix multiple fluids at aproportionate rate. This pump is capable of metering a limited volume of fluid through medical syringes at a low level of dosage error.</p>
-										</div>
-									 </div>
-								  </div>
-							   <div class="timeline-centered">
-									<article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
-									 <div class="timeline-entry-inner">
-										<div class="timeline-icon color-1">
-										   <i class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="Jan 2019 - present"><i class="fas fa-edit"></i> </i>
-										   
-										</div>
-										<div class="timeline-label level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="Jan 2019 - present">
-										   <h2>Analysis of Ply-Drops in Fiber Reinforced composite structures by Using Ansys Mechanical APDL</h2>
-										   <p><strong>Guided by, Dr. Prakash Jadav, Associate Professor, Department of Mechanical Engineering, SRM University - AP</strong><br>To perform FEA simulations models of fiber reinforced composite structures with and without ply drops and after analyzing stress and strain levels, come up with the impact on design allowable.</p>
-
-										</div>
-									 </div>
-								  </div>								  
-							</div>                         									
-                            
-                        </div><!--//content-->  
-						
-    <h3 style = "text-align:center"> <a  class="badge badge-warning center" target="_blank" style="color:white;" >Individual Works</a> <br></br> </h3>       
-    <!--div class="center"> 
-        <p> 
-            <font color="green"> 
-                GeeksForGeeks A Computer 
-                Science Portal for Geeks 
-            </font> 
-        </p> 
-    </div!--> 						
-	
-						
-						
-			<div class="container">						
-					<div class="gallery_f_inner row imageGallery1">
-							<!-- Licenses------------------------------------------------------->
-									<div class="col-lg-6 col-md-4 col-sm-4 lic">
-										<div class="h_gallery_item ">
-											<div id="slider">
-												<figure>
-													<img src="img/Project/i viz/i viz 4.JPG">
-													<img src="img/Project/i viz/i viz 1.JPG">
-													<img src="img/Project/i viz/i viz 2.JPG">
-													<img src="img/Project/i viz/i viz 3.JPG">
-													<img src="img/Project/i viz/i viz 4.JPG">
-											</div>
-											<div class="g_item_text">
-												<p>Surface Design of a Super Car - i Viz</p>
-												<a class="badge badge-theme" target="_blank" style="color:white;"><i class="fas fa-tags"></i> &nbsp;CAD</a>
-												<a class="badge badge-theme" target="_blank" style="color:white;"><i class="fas fa-tags"></i> &nbsp;SolidWorks</a>
-												<a class="badge badge-theme" target="_blank" style="color:white;"><i class="fas fa-tags"></i> &nbsp;Visualize</a>
-												<!--a  class="badge badge-theme" id="myBtn"  style="color:white;"><i class="fas fa-expand"></i> &nbsp; Read ...</i></a!-->
-											</div>
-										</div>
-									</div>
-									<div class="col-lg-6 col-md-4 col-sm-4 lic">
-										<div class="h_gallery_item">
-										<div id="slider">
-											<figure>
-												<img src="https://121arun.github.io/hello/img/Project/i%20viz/r%20(1).png">
-												<img src="https://121arun.github.io/hello/img/Project/i%20viz/r%20(2).png">
-												<img src="https://121arun.github.io/hello/img/Project/i%20viz/r%20(3).png">
-												<img src="https://121arun.github.io/hello/img/Project/i%20viz/r%20(4).png">
-												<img src="https://121arun.github.io/hello/img/Project/i%20viz/r%20(1).png">
-										
-										</div> 
-											<br> </br>
-											<div class="g_item_text">
-												<p>Surface Design of a Fighter Jet - Rafale</p>
-												<a class="badge badge-theme" target="_blank" style="color:white;"><i class="fas fa-tags"></i> &nbsp;CAD</a>
-												<a class="badge badge-theme" target="_blank" style="color:white;"><i class="fas fa-tags"></i> &nbsp;SolidWorks</a>
-												<a class="badge badge-theme" target="_blank" style="color:white;"><i class="fas fa-tags"></i> &nbsp;Visualize</a>
-												<a class="badge badge-theme" target="_blank" style="color:white;"><i class="fas fa-expand"></i></a>
-											</div>	
-
-											
-										</div>
-									</div>										
-																			
-
-									<div class="col-lg-6 col-md-4 col-sm-6 lic">
-										<div class="h_gallery_item">
-										<div id="slider">										
-										<video width = "300" height = "220" controls="" autoplay = "" loop = "" src = "img/Project/Sukhoi Su - 30 MKI/SU-30.mp4" type = "video">
-										</video> 
-									</div> 										
-											<div class="g_item_text">
-												<p>Sukhoi Su - 30 MKI </p>
-												<a class="badge badge-theme" target="_blank" style="color:white;"><i class="fas fa-tags"></i> &nbsp;CAD</a>
-												<a href="" class="badge badge-theme" target="_blank" ><i class="fas fa-tags"></i> &nbsp;SolidWorks</a>
-												<a href="" class="badge badge-theme" target="_blank" ><i class="fas fa-expand"></i></a>												
-											
-											</div>							
-										</div>
-									</div>
-									<br></br>
-									<br></br>
-								
-									<div class="col-lg-6 col-md-4 col-sm-4 lic">
-										<div class="h_gallery_item">
-										<div id="slider">		
-											<figure>
-												<img src="https://121arun.github.io/hello/img/Project/CFD Rafale/1.png">
-												<img src="https://121arun.github.io/hello/img/Project/CFD Rafale/2.png">
- 												<img src="https://121arun.github.io/hello/img/Project/CFD Rafale/3.png">
-												<img src="https://121arun.github.io/hello/img/Project/CFD Rafale/4.png">
-												<img src="https://121arun.github.io/hello/img/Project/CFD Rafale/1.png">
-										
-										</div>    	
-									<br></br>
-											<div class="g_item_text">
-											
-												<p>CFD analysis of Rafale</p>
-												<a class="badge badge-theme" target="_blank" style="color:white;"><i class="fas fa-tags"></i> &nbsp;CFD</a>
-												<a class="badge badge-theme" target="_blank" style="color:white;"><i class="fas fa-tags"></i> &nbsp;ANSYS Workbench</a>
-												<a class="badge badge-theme" target="_blank" style="color:white;"><i class="fas fa-tags"></i> &nbsp;Fluent</a>
-												<a  class="badge badge-theme pointer" id="myBtn"  style="color:white;"><i class="fa fa-expand" ></i> &nbsp; More</a>
-											</div>							
-										</div>
-											<div id="myModal" class="modal">
-											  <div class="modal-content">
-												<span class="close float-right badge badge-theme">&times;</span>
-											<p> 
-											<p><strong>CFD Analysis of a Fighter Jet - RAFALE</strong><br>• This was a project done during a part of the subject <strong>Computational Fluid Dynamics"</strong> during my 6th Semester.
-											<br> • Responsibilities: </br>&emsp; - Entire model is designrd using SolidWorks<br>&emsp; - Meshed in the Workbench</br>&emsp; - Simulated Using ANSYS Fluent.</p>
-											</p>
-
-											<div id="parent">
-												<div id="left">Objective</div>
-												<div id="right"> <strong>Flow over an 3D object:</strong> Analysing the fluid flow over a 3-Dimensional object (Rafale) using Ansys Fluent and observing the shock waves</div>
-											</div>		
-
-											<div id="parent">
-												<div id="left">Flow Type</div>
-												<div id="right"> Compressible Flow</div>
-											</div>
-
-											<div id="parent">
-												<div id="left">Mach Used</div>
-												<div id="right"> Mach 2 - Supersonic flow regime</div>
-											</div>											
-    											<p style = "text-align:center;" ><img width = "640" height = "360" src="https://121arun.github.io/hello/img/Project/CFD Rafale/1.png"></p>
-												<p style = "text-align:center;" ><img width = "640" height = "360" src="https://121arun.github.io/hello/img/Project/CFD Rafale/2.png"></p>
- 												<p style = "text-align:center;" ><img width = "640" height = "360" src="https://121arun.github.io/hello/img/Project/CFD Rafale/3.png"></p>
-												<p style = "text-align:center;" ><img width = "640" height = "360" src="https://121arun.github.io/hello/img/Project/CFD Rafale/4.png"></p>
-												<p style = "text-align:center;" ><img width = "760" height = "300" src="https://121arun.github.io/hello/img/Project/CFD Rafale/Raf cfd wing.jpg"></p>
-												<p style = "text-align:center;" ><img width = "640" height = "300" src="https://121arun.github.io/hello/img/Project/CFD Rafale/Raf cfd wing zoom.jpg"></p>
-												<p style = "text-align:center;" ><img width = "640" height = "360" src="https://121arun.github.io/hello/img/Project/CFD Rafale/General Shocks.png"></p>
+/* element to "keep/ fill" the space of the content, gets intrinsic height via js */
+.sy-filler {
+  width: 100%; }
+  .sy-filler.ready {
+    -webkit-transition: padding 600ms ease;
+         -o-transition: padding 600ms ease;
+            transition: padding 600ms ease; }
 
 
-											<p><strong>Comments</strong></p>
-											<br>&emsp; • Shock waves are produced on the leading edges and body of the Aircraft. </br>
-											<br>&emsp; • Shock waves influences the Aerodynamic flow of the aircraft.</br>
-											<br>&emsp; • Pressure and Temperature increases.</br>
-											<br>&emsp; • Lift can be created.</br>
-											<br>&emsp; • Drag is Introduced.</br>
-											<br>&emsp; • The geometry needsto be optimized to fulfil the expectations.</br>
-											
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'source-sans-pro', Helvetica, Arial, sans-serif;
+	font-size: 14px;
+}
+.demo_wrapper {
+	width: 50%;
+	margin: 0 auto;
+}
+@media only screen and (max-device-width: 800px), screen and (max-width: 800px) {
+  .demo_wrapper {
+    width: 80%;
+  }  
+}
+.demo_block {
+	width: 100%;
+}
+/*model*/
+body {font-family: Arial, Helvetica, sans-serif;}
 
-											  </div>
-											</div>										
-										
-									</div>                    
-									</div><!--//section-inner-->   
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 100; /* Sit on top */
+  padding-top: 60px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: scroll; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 
-					
-                </section><!--//section-->     
+}
 
-                <section class="experience section colorlib-experience" data-section="experience">
-                    <div class="section-inner shadow-sm rounded">
-						<div class="row">
-							<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-								<div class="about-desc">
-								<h2 class="heading" id="Experiences">Experiences</h2>
-								</div>
-							</div>
-						</div>
-                        <div class="content row">
-							<div class="col-md-12">
-							   <div class="timeline-centered">
-									<article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
-									 <div class="timeline-entry-inner">										<div class="timeline-icon color-1">
-										   <i class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="Dec 2019 - Apr 2020"><i class="fas fa-edit"></i> </i>
-										   
-										</div>
-									 
-										<div class="timeline-label level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="Dec 2019 - Apr 2020">
-										   <h2>MINERVA PROJECT</h2>										   
-										   <p><strong>TEACHING ASSISTANT</strong><br>• Undergraduate Teaching Assistant for the course “Critical Thinking”<br> • Responsibilities: </br>&emsp; - Grading assignments and polls.<br>&emsp; - Clearing doubts in breakout sessions</br>&emsp; - Organizing office hours for doubt clarification and practice.</p>
-										</div>
-									 </div>
-								  </div>
-							   <div class="timeline-centered">
-									<article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
-									 <div class="timeline-entry-inner">
-										<div class="timeline-icon color-1">
-										   <i class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="May 2019 - Jun 2019"><i class="fas fa-edit"></i> </i>
-										   
-										</div>									 									 
-										<div class="timeline-label level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="May 2019 - Jun 2019">
-										   <h2>INTEGRAL COACH FACTORY</h2>										   
-										   <p><strong>SUMMER INTERN</strong><br> • Responsibilities: </br>
-										   &emsp; - Observing the process in the various workshops.<br>&emsp; - Completing the Tasks in Design and Development Centre</br>&emsp; - Submitting a final report.</p>
-										</div>
-									 </div>
-								  </div>		
-							   <div class="timeline-centered">
-									<article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
-									 <div class="timeline-entry-inner">
-										<div class="timeline-icon color-1">
-										   <i class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="June 2020"><i class="fas fa-edit"></i> </i>
-										   
-										</div>									 
-										<div class="timeline-label level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="June 2020">
-										   <h2>APSSDC</h2>										   
-										   <p><strong>SUMMER INTERN</strong><br>• Solid Edge Program<br> • Responsibilities: </br>
-										   &emsp; - 	Attending the classes.<br>&emsp; - Completing the daily tasks and Submitting</p>
-										</div>
-									 </div>
-								  </div>
-							   <div class="timeline-centered">
-									<article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
-									 <div class="timeline-entry-inner">
-										<div class="timeline-icon color-1">
-										   <i class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="June 2020"><i class="fas fa-edit"></i> </i>
-										   
-										</div>									 
-										<div class="timeline-label level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="June 2020">
-										   <h2>APSSDC</h2>										   
-										   <p><strong>SUMMER INTERN</strong><br>• CATIA Program<br> • Responsibilities: </br>
-										   &emsp; - 	Attending the classes.<br>&emsp; - Completing the daily tasks and Submitting</p>
-										 </p>
-										</div>
-									 </div>
-								  </div>								  
-							   <div class="timeline-centered">
-									<article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
-									 <div class="timeline-entry-inner">
-										<div class="timeline-icon color-1">
-										   <i class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="Jun 2018 - Sep 2018"><i class="fas fa-edit"></i> </i>
-										   
-										</div>									 
-										<div class="timeline-label level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="Jun 2018 - Sep 2018">
-										   <h2>SWACHH BHARAT</h2>										   
-										   <p><strong>SUMMER INTERN</strong><br>• A 100 hr Internship offered by Govt. of INDIA.<br> • Responsibilities: </br>
-										   &emsp; - Coordinated a Team of 10.<br>&emsp; - Reaching out to the people in selected villages to create awareness.</br>&emsp; - Submitting a final report.</p>
-										</div>
-									 </div>
-								  </div>
-									<div class="timeline-centered">
-									<article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
-									 <div class="timeline-entry-inner">
-										<div class="timeline-icon color-1">
-										   <i class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="Jan 2019 - present"><i class="fas fa-edit"></i> </i>
-										   
-										</div>									 
-										<div class="timeline-label level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="Jan 2019 - present">
-										   <h2>NATIONAL SERVICE SCHEME</h2>										   
-										   <p><strong>VOLUNTEER</strong><br>• Active.<br> • Responsibilities: </br>
-										   &emsp; - Working as a community to serve the society.</p>
-										</div>
-									 </div>
-								  </div>			
-								  <div class="timeline-centered">
-									<article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
-									 <div class="timeline-entry-inner">
-										<div class="timeline-icon color-1">
-										   <i class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="Jun 2020 - present"><i class="fas fa-edit"></i> </i>
-										   
-										</div>									 
-										<div class="timeline-label level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="Jun 2020 - present">
-										   <h2>MEDIA-WIKI</h2>										   
-										   <p><strong>VOLUNTEER</strong><br>• Active<br> • Responsibilities: </br>
-										   &emsp; - Content Translator from English - Tamil.</p>
-										</div>
-									 </div>
-								  </div>			
-								  
-								</div>                         									
-                            
-                        </div><!--//content-->  
-                    </div><!--//section-inner-->                 
-                </section><!--//section-->    				
-                <section class="home_gallery_area p_120 github section">
-                    <div class="container section-inner shadow-sm rounded">				
-                        <h2 class=" main_title heading" id="Licenses_$_Certifications">Licenses and Certifications</h2>					
-						<p> Here, you can find the some of my achievements and learning certificates throughout my coursework. You can click &nbsp;<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="Hello..."><i   class="badge badge-theme"  >Verify</i></span> to verify some of my certifications. </p>
-							<div class="isotope_fillter sticky" class="nav-placeholder ">
-								<nav>
-									<div class="nav-inner nav-inner-most">
-											<ul class="gallery_filter list ">
-												<li class="active" data-filter="*"><a href="#lic">All</a></li>
-												<li data-filter=".lic"><a href="#lic">Licenses</a></li>
-												<li data-filter=".cour"><a href="#cour">Courses</a></li>
-												<li data-filter=".part"><a href="#part">Participation</a></li>
-												<li data-filter=".ws"><a href="#ws">Workshops</a></li>
-											</ul>
-									</div>
-								</nav>									
-							</div>
-	
-							<br> <a id="lic" ></a></br>	
-							<br> </br>								
-							<div class="container">						
-								<div class="gallery_f_inner row imageGallery1">
-							<!-- Licenses------------------------------------------------------->
-									<div class="col-lg-4 col-md-4 col-sm-6 lic" >
-										<div class="h_gallery_item">
-											<div class="g_img_item">
-												<img class="img-fluid" src="img/Certificates/Licences/Certificate_C-ZRUGX4E5DF.jpg" alt="">
-												<a class="light" href="img/Certificates/Licences/Certificate_C-ZRUGX4E5DF.jpg" data-lightbox="mygallery" data-title="Certiﬁed SolidWorks Professional (CSWP)"><img src="img/icon.png" alt=""></a>
-											</div>        						
-											<div class="g_item_text">
-												<p>Certiﬁed SolidWorks Professional (CSWP) </p>
-												<a href="https://cv.virtualtester.com/qr/?b=SLDWRKS&i=C-ZRUGX4E5DF" class="badge badge-theme" target="_blank">Verify</a>
-											</div>							
-										</div>
-									</div>
-									<div class="col-lg-4 col-md-4 col-sm-6 lic">
-										<div class="h_gallery_item">
-											<div class="g_img_item">
-												<img class="img-fluid" src="img/Certificates/Licences/Certificate_C-67ZSP6W73H.jpg" alt="">
-												<a class="light" href="img/Certificates/Licences/Certificate_C-67ZSP6W73H.jpg" data-lightbox="mygallery" data-title="Certiﬁed SolidWorks Associate (CSWA)"><img src="img/icon.png" alt=""></a>
-											</div>        						
-											<div class="g_item_text">
-												<p>Certiﬁed SolidWorks Associate (CSWA)</p>
-												<a href="https://cv.virtualtester.com/qr/?b=SLDWRKS&i=C-67ZSP6W73H" class="badge badge-theme" target="_blank" >Verify</a>
-											</div>							
-										</div>
-									</div>
-									<div class="col-lg-4 col-md-4 col-sm-6 lic">
-										<div class="h_gallery_item">
-											<div class="g_img_item">
-												<img class="img-fluid" src="img/Certificates/Licences/Certificate_C-RPUAW2GLJ8.jpg" alt="">
-												<a class="light" href="img/Certificates/Licences/Certificate_C-RPUAW2GLJ8.jpg" data-lightbox="mygallery" data-title="Certiﬁed SolidWorks Professional Advanced - Surfacing"><img src="img/icon.png" alt=""></a>
-											</div>        						
-											<div class="g_item_text" >
-												<p>Certiﬁed SolidWorks Professional Advanced - Surfacing</p>
-												<a href="https://cv.virtualtester.com/qr/?b=SLDWRKS&i=C-RPUAW2GLJ8" class="badge badge-theme" target="_blank" >Verify</a>
-											</div>							
-										</div>
-									</div>
-									<div class="col-lg-4 col-md-4 col-sm-6 lic">
-										<div class="h_gallery_item">
-											<div class="g_img_item">
-												<img class="img-fluid" src="img/Certificates/Licences/CSWPA-SM.jpg" alt="">
-												<a class="light" href="img/Certificates/Licences/CSWPA-SM.jpg" data-lightbox="mygallery" data-title="Certiﬁed SolidWorks Professional Advanced - Sheet Metal"><img src="img/icon.png" alt=""></a>
-											</div>        						
-											<div class="g_item_text">
-												<p>Certiﬁed SolidWorks Professional Advanced - Sheet Metal</p>
-												<a href="https://cv.virtualtester.com/qr/?b=SLDWRKS&i=C-AF8LXCGW4U" class="badge badge-theme" target="_blank" >Verify</a>
-											</div>							
-										</div>
-									</div>
-									<div class="col-lg-4 col-md-4 col-sm-6 lic">
-										<div class="h_gallery_item">
-											<div class="g_img_item">
-												<img class="img-fluid" src="img/Certificates/Licences/CSWPA-DT.jpg" alt="">
-												<a class="light" href="img/Certificates/Licences/CSWPA-DT.jpg" data-lightbox="mygallery" data-title="Certiﬁed SolidWorks Professional Advanced - Drawing Tools"><img src="img/icon.png" alt=""></a>
-											</div>        						
-											<div class="g_item_text">
-												<p>Certiﬁed SolidWorks Professional Advanced - Drawing Tools</p>
-												<a href="https://cv.virtualtester.com/qr/?b=SLDWRKS&i=C-GYBTAPJLSM" class="badge badge-theme" target="_blank" >Verify</a>
-											</div>							
-										</div>
-									</div>
-									<div class="col-lg-4 col-md-4 col-sm-6 lic">
-										<div class="h_gallery_item">
-											<div class="g_img_item">
-												<img class="img-fluid" src="img/Certificates/Licences/CSWPA-WD.jpg" alt="">
-												<a class="light" href="img/Certificates/Licences/CSWPA-WD.jpg" data-lightbox="mygallery" data-title="Certiﬁed SolidWorks Professional Advanced - Weldments"><img src="img/icon.png" alt=""></a>
-											</div>        						
-											<div class="g_item_text">
-												<p>Certiﬁed SolidWorks Professional Advanced - Weldments</p>
-												<a href="https://cv.virtualtester.com/qr/?b=SLDWRKS&i=C-9HG63UQSWD" class="badge badge-theme" target="_blank" >Verify</a>
-											</div>							
-										</div>
-									</div>
-									<div class="col-lg-4 col-md-4 col-sm-6 lic">
-										<div class="h_gallery_item">
-											<div class="g_img_item">
-												<img class="img-fluid" src="img/Certificates/Licences/Certificate_C-NE4Y32CZXU.jpg" alt="">
-												<a class="light" href="img/Certificates/Licences/Certificate_C-NE4Y32CZXU.jpg" data-lightbox="mygallery" data-title="Certiﬁed SolidWorks Associate Additive Manufacturing – CSWA AM"><img src="img/icon.png" alt=""></a>
-											</div>        						
-											<div class="g_item_text">
-												<p>Certiﬁed SolidWorks Associate Additive Manufacturing – CSWA AM</p>
-												<a href="https://cv.virtualtester.com/qr/?b=SLDWRKS&i=C-NE4Y32CZXU" class="badge badge-theme" target="_blank" >Verify</a>
-											</div>							
-										</div>
-									</div>
-									<div class="col-lg-4 col-md-4 col-sm-6 lic">
-										<div class="h_gallery_item">
-											<div class="g_img_item">
-												<img class="img-fluid" src="img/Certificates/Licences/Certificate_C-P3BNGE9RZQ.jpg" alt="">
-												<a class="light" href="img/Certificates/Licences/Certificate_C-P3BNGE9RZQ.jpg" data-lightbox="mygallery" data-title="3DEXPERIENCE – Platform Explorer"><img src="img/icon.png" alt=""></a>
-											</div>        						
-											<div class="g_item_text">
-												<p>3DEXPERIENCE – Platform Explorer</p>
-												<a href="https://cv.virtualtester.com/qr/?b=SLDWRKS&i=C-P3BNGE9RZQ " class="badge badge-theme" target="_blank" >Verify</a>
-											</div>							
-										</div>
-									</div>
-									<div class="col-lg-4 col-md-4 col-sm-6 lic">
-										<div class="h_gallery_item">
-											<div class="g_img_item">
-												<img class="img-fluid" src="img/Certificates/Licences/CSWX - Pre req.jpg" alt="">
-												<a class="light" href="img/Certificates/Licences/CSWX - Pre req.jpg" data-lightbox="mygallery" data-title="Meets the pre-requisites for CSWE"><img src="img/icon.png" alt=""></a>
-											</div>        						
-											<div class="g_item_text">
-												<p>Meets the pre-requisites for CSWE</p>
-												<a href="https://cv.virtualtester.com/qr/?b=SLDWRKS&i=C-X632MLHNG9" class="badge badge-theme" target="_blank" >Verify</a>
-											</div>							
-										</div>
-									</div>		
-									<div class="col-lg-4 col-md-4 col-sm-6 lic">
-										<div class="h_gallery_item">
-											<div class="g_img_item">
-												<img class="img-fluid" src="img/Certificates/Licences/TI.jpg" alt="">
-												<a class="light" href="img/Certificates/Licences/TI.jpg" data-lightbox="mygallery" data-title="IICDC - An online Contest by TI University Program"><img src="img/icon.png" alt=""></a>
-											</div>        						
-											<div class="g_item_text">
-												<p>IICDC - An online Contest by TI University Program</p>
-												<a href="#" class="badge badge-theme" target="_blank" >Verify</a>
-											</div>							
-										</div>
-									</div>	
-								</div>
-							</div>
-							<br> <a id="cour" ></a></br>							
-							<br> </br>							
-							<!-- Courses------------------------------------------------------->							
-							<div class="container">									
-								<div class="gallery_f_inner row imageGallery1">													
-									<div class="col-lg-4 col-md-4 col-sm-6 cour " >
-										<div class="h_gallery_item">
-											<div class="g_img_item">
-												<img class="img-fluid" src="img/Certificates/Courses/K SPACE CRAFTS.jpg" alt="">
-												<a class="light" href="img/Certificates/Courses/K SPACE CRAFTS.jpg" data-lightbox="mygallery" data-title="Kinematics: Describing the Motions of Spacecraft"><img src="img/icon.png" alt=""></a>
-											</div>        						
-											<div class="g_item_text">
-												<p>Kinematics: Describing the Motions of Spacecraft</p>
-												<a href="https://www.coursera.org/account/accomplishments/records/FKLSLFEFHURE" class="badge badge-theme" target="_blank" >Verify</a>
-											</div>							
-										</div>
-									</div>
-									<div class="col-lg-4 col-md-4 col-sm-6 cour ">
-										<div class="h_gallery_item">
-											<div class="g_img_item">
-												<img class="img-fluid" src="img/Certificates/Courses/MATLAB Onramp.jpg" alt="">
-												<a class="light" href="img/Certificates/Courses/MATLAB Onramp.jpg" data-lightbox="mygallery" data-title="Kinematics: Describing the Motions of Spacecraft"><img src="img/icon.png" alt=""></a>
-											</div>        						
-											<div class="g_item_text">
-												<p>MATLAB Onramp</p>
-												<a href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=f2caecf8-e39a-42fd-b22f-fa5e8e266f4b" class="badge badge-theme" target="_blank" >Verify</a>
-											</div>							
-										</div>
-									</div>
-									<div class="col-lg-4 col-md-4 col-sm-6 cour ">
-										<div class="h_gallery_item">
-											<div class="g_img_item">
-												<img class="img-fluid" src="img/Certificates/Courses/PY4E - Getting Started withPython.jpg" alt="">
-												<a class="light" href="img/Certificates/Courses/PY4E - Getting Started withPython.jpg" data-lightbox="mygallery" data-title="PY4E: Getting Started withPython"><img src="img/icon.png" alt=""></a>
-											</div>        						
-											<div class="g_item_text">
-												<p>PY4E: Getting Started with Python</p>
-												<a href="https://www.coursera.org/account/accomplishments/records/9GYD3ZSPGJHM" class="badge badge-theme" target="_blank" >Verify</a>
-											</div>							
-										</div>
-									</div>	
-									<div class="col-lg-4 col-md-4 col-sm-6 cour ">
-										<div class="h_gallery_item">
-											<div class="g_img_item">
-												<img class="img-fluid" src="img/Certificates/Courses/PY4E Data Structures.jpg" alt="">
-												<a class="light" href="img/Certificates/Courses/PY4E Data Structures.jpg" data-lightbox="mygallery" data-title="PY4E: Data Structures"><img src="img/icon.png" alt=""></a>
-											</div>        						
-											<div class="g_item_text">
-												<p>PY4E: Python Data Structures</p>
-												<a href="https://www.coursera.org/account/accomplishments/records/WJX3JS9GD9NE" class="badge badge-theme" target="_blank" >Verify</a>
-											</div>							
-										</div>
-									</div>										
-									<div class="col-lg-4 col-md-4 col-sm-6 cour ">
-										<div class="h_gallery_item">
-											<div class="g_img_item">
-												<img class="img-fluid" src="img/Certificates/Courses/Sololearn py3.jpg" alt="">
-												<a class="light" href="img/Certificates/Courses/Sololearn py3.jpg" data-lightbox="mygallery" data-title="Python 3 Tutorial course"><img src="img/icon.png" alt=""></a>
-											</div>        						
-											<div class="g_item_text">
-												<p>Python 3 Tutorial course</p>
-												<a href="https://www.sololearn.com/Certificate/1073-14910648/pdf/" class="badge badge-theme" target="_blank" >Verify</a>
-											</div>							
-										</div>
-									</div>	
-									<div class="col-lg-4 col-md-4 col-sm-6 cour ">
-										<div class="h_gallery_item">
-											<div class="g_img_item">
-												<img class="img-fluid" src="img/Certificates/Courses/C++ Certificate.jpg" alt="">
-												<a class="light" href="img/Certificates/Courses/C++ Certificate.jpg" data-lightbox="mygallery" data-title="Foundation of C++"><img src="img/icon.png" alt=""></a>
-											</div>        						
-											<div class="g_item_text">
-												<p>Foundation of C++</p>
-												<a  class="badge badge-theme"  >Verify</a>
-											</div>							
-										</div>
-									</div>		
-								</div>
-							</div>
-							<br> <a id="part" ></a></br>						
-							<br> </br>								
-							<!-- Participation------------------------------------------------------->							
-							<div class="container">									
-								<div class="gallery_f_inner row imageGallery1">													
-									<div class="col-lg-4 col-md-4 col-sm-6 part">
-										<div class="h_gallery_item">
-											<div class="g_img_item">
-												<img class="img-fluid" src="img/Certificates/Participation/Arun Prasath M_Participation Aakruti 2018.jpg" alt="">
-												<a class="light" href="img/Certificates/Participation/Arun Prasath M_Participation Aakruti 2018.jpg" data-lightbox="mygallery" data-title="Participation: Aakruti 2018"><img src="img/icon.png" alt=""></a>
-											</div>        						
-											<div class="g_item_text" class="button-group-area mt-40">
-												<p>Participation: Aakruti 2018</p>
-												<a  class="badge badge-theme"  >Verify</a>
-											</div>							
-										</div>
-									</div>	
-									<div class="col-lg-4 col-md-4 col-sm-6 part">
-										<div class="h_gallery_item">
-											<div class="g_img_item">
-												<img class="img-fluid" src="img/Certificates/Participation/Arun Prasath M_Participation Aakruti 2019.jpg" alt="">
-												<a class="light" href="img/Certificates/Participation/Arun Prasath M_Participation Aakruti 2019.jpg" data-lightbox="mygallery" data-title="Participation: Aakruti 2019"><img src="img/icon.png" alt=""></a>
-											</div>        						
-											<div class="g_item_text" class="button-group-area mt-40">
-												<p>Participation: Aakruti 2019</p>
-												<a  class="badge badge-theme"  >Verify</a>
-											</div>							
-										</div>
-									</div>	
-										
-								</div>
-							</div>										
-							<br> <a id="ws" ></a></br>						
-							<br> </br>										
-							<!-- Workshops------------------------------------------------------->   							
-							<div class="container">							
-								<div class="gallery_f_inner row imageGallery1">	
-									<div class="col-lg-4 col-md-4 col-sm-6 ws">
-										<div class="h_gallery_item">
-											<div class="g_img_item">
-												<img class="img-fluid" src="img/Certificates/Workshops/APSSDC.png" alt="">
-												<a class="light" href="img/Certificates/Workshops/APSSDC.png" data-lightbox="mygallery" data-title="Engineering Orientation Program by APSSDC"><img src="img/icon.png" alt=""></a>
-											</div>        						
-											<div class="g_item_text" class="button-group-area mt-40">
-												<p>Engineering Orientation Program by APSSDC</p>
-												<a  class="badge badge-theme"  >Verify</a>
-											</div>							
-										</div>
-									</div>
-								</div>
-							</div>									
-							<br></br>
-    <h3 style = "text-align:center"> <a  class="badge badge-info center" target="_blank" style="color:white;" >Webinars</a> <br></br> </h3>       
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
 
-							<div class="container">							
-								<div class="gallery_f_inner row imageGallery1">	
-									<div class="col-lg-4 col-md-4 col-sm-6 ws " >
-										<div class="h_gallery_item">
-											<div class="g_img_item">
-												<img class="img-fluid" src="img/Certificates/Workshops/National Level Webinar on Simulation Driven Innovation for e-Mobility.jpg" alt="">
-												<a class="light" href="img/Certificates/Workshops/National Level Webinar on Simulation Driven Innovation for e-Mobility.jpg" data-lightbox="mygallery" data-title="Bootcamp: Fundamentals of CFD"><img src="img/icon.png" alt=""></a>
-											</div>
-											<div class="g_item_text">
-												<p>Webinar: National Level Webinar on Simulation Driven Innovation for e-Mobility</p>
-												<a  class="badge badge-theme"  >Verify</a>
-											</div>
-										</div>
-									</div>
-									<div class="col-lg-4 col-md-4 col-sm-6 ws " >
-										<div class="h_gallery_item">
-											<div class="g_img_item">
-												<img class="img-fluid" src="img/Certificates/Workshops/Solidworks Simulia Works.jpg" alt="">
-												<a class="light" href="img/Certificates/Workshops/Solidworks Simulia Works.jpg" data-lightbox="mygallery" data-title="Bootcamp: Fundamentals of CFD"><img src="img/icon.png" alt=""></a>
-											</div>
-											<div class="g_item_text">
-												<p>Solidworks Simulia Works</p>
-												<a  class="badge badge-theme"  >Verify</a>
-											</div>
-										</div>
-									</div>									
-									<div class="col-lg-4 col-md-4 col-sm-6 ws " >
-										<div class="h_gallery_item">
-											<div class="g_img_item">
-												<img class="img-fluid" src="img/Certificates/Workshops/Bootcamp- Fundamentals of CFD.jpg" alt="">
-												<a class="light" href="img/Certificates/Workshops/Bootcamp- Fundamentals of CFD.jpg" data-lightbox="mygallery" data-title="Bootcamp: Fundamentals of CFD"><img src="img/icon.png" alt=""></a>
-											</div>
-											<div class="g_item_text">
-												<p>Bootcamp: Fundamentals of CFD</p>
-												<a  class="badge badge-theme"  >Verify</a>
-											</div>
-										</div>
-									</div>
-									<div class="col-lg-4 col-md-4 col-sm-6 ws">
-										<div class="h_gallery_item">
-											<div class="g_img_item">
-												<img class="img-fluid" src="img/Certificates/Workshops/Autonomous Driving.jpg" alt="">
-												<a class="light" href="img/Certificates/Workshops/Autonomous Driving.jpg" data-lightbox="mygallery" data-title="Workshop: Autonomous Driving"><img src="img/icon.png" alt=""></a>
-											</div>
-											<div class="g_item_text">
-												<p>Workshop: Autonomous Driving</p>
-												<a  class="badge badge-theme"  >Verify</a>
-											</div>
-										</div>
-									</div>
-									<div class="col-lg-4 col-md-4 col-sm-6 ws">
-										<div class="h_gallery_item">
-											<div class="g_img_item">
-												<img class="img-fluid" src="img/Certificates/Workshops/How to model an Electric Vehicle using MATLAB & Simulink.jpg" alt="">
-												<a class="light" href="img/Certificates/Workshops/How to model an Electric Vehicle using MATLAB & Simulink.jpg" data-lightbox="mygallery" data-title="Workshop: How to model an Electric Vehicle using MATLAB & Simulink"><img src="img/icon.png" alt=""></a>
-											</div>
-											<div class="g_item_text">
-												<p>Workshop: How to model an Electric Vehicle using MATLAB & Simulink</p>							
-												<a  class="badge badge-theme"  >Verify</a>
-											</div>
-										</div>
-									</div>
-									<div class="col-lg-4 col-md-4 col-sm-6 ws">
-										<div class="h_gallery_item">
-											<div class="g_img_item">
-												<img class="img-fluid" src="img/Certificates/Workshops/Introduction to State Space Control.jpg" alt="">
-												<a class="light" href="img/Certificates/Workshops/Introduction to State Space Control.jpg" data-lightbox="mygallery" data-title="Workshop: Introduction to State Space Control"><img src="img/icon.png" alt=""></a>
-											</div>
-											<div class="g_item_text">
-												<p>Workshop: Introduction to State Space Control</p>
-												<a  class="badge badge-theme"  >Verify</a>
-											</div>
-										</div>
-									</div>					
-									<div class="col-lg-4 col-md-4 col-sm-6 ws">
-										<div class="h_gallery_item">
-											<div class="g_img_item">
-												<img class="img-fluid" src="img/Certificates/Workshops/CFD Simulation of Li-Ion Battery.jpg" alt="">
-												<a class="light" href="img/Certificates/Workshops/CFD Simulation of Li-Ion Battery.jpg" data-lightbox="mygallery" data-title="Workshop: CFD Simulation of Li-Ion Battery"><img src="img/icon.png" alt=""></a>
-											</div>
-											<div class="g_item_text">
-												<p>Workshop: CFD Simulation of Li-Ion Battery</p>
-												<a  class="badge badge-theme"  >Verify</a>
-											</div>
-										</div>
-									</div>
-									<div class="col-lg-4 col-md-4 col-sm-6 ws">
-										<div class="h_gallery_item">
-											<div class="g_img_item">
-												<img class="img-fluid" src="img/Certificates/Workshops/Engineering Calculations Using MathCAD.jpg" alt="">
-												<a class="light" href="img/Certificates/Workshops/Engineering Calculations Using MathCAD.jpg" data-lightbox="mygallery" data-title="Workshop: CFD Simulation of Li-Ion Battery"><img src="img/icon.png" alt=""></a>
-											</div>
-											<div class="g_item_text">
-												<p>Workshop: Engineering Calculations Using MathCAD</p>
-												<a  class="badge badge-theme"  >Verify</a>
-											</div>
-										</div>
-									</div>
-																		<div class="col-lg-4 col-md-4 col-sm-6 ws">
-										<div class="h_gallery_item">
-											<div class="g_img_item">
-												<img class="img-fluid" src="img/Certificates/Workshops/Practical Approach Towards Structural Analysis using CAE.jpg" alt="">
-												<a class="light" href="img/Certificates/Workshops/Practical Approach Towards Structural Analysis using CAE.jpg" data-lightbox="mygallery" data-title="Workshop: CFD Simulation of Li-Ion Battery"><img src="img/icon.png" alt=""></a>
-											</div>
-											<div class="g_item_text">
-												<p>Workshop: Practical Approach Towards Structural Analysis using CAE</p>
-												<a  class="badge badge-theme"  >Verify</a>
-											</div>
-										</div>
-									</div>
-									<div class="col-lg-4 col-md-4 col-sm-6 ws">
-										<div class="h_gallery_item">
-											<div class="g_img_item">
-												<img class="img-fluid" src="img/Certificates/Workshops/Computational Fluid Dynamics.jpg" alt="">
-												<a class="light" href="img/Certificates/Workshops/Computational Fluid Dynamics.jpg" data-lightbox="mygallery" data-title="Workshop: CFD Simulation of Li-Ion Battery"><img src="img/icon.png" alt=""></a>
-											</div>
-											<div class="g_item_text">
-												<p>Workshop: Computational Fluid Dynamics</p>
-												<a  class="badge badge-theme"  >Verify</a>
-											</div>
-										</div>
-									</div>									
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
 
-								</div>
-							</div>
-			
-                    </div><!--//secton-inner-->
-                </section><!--//section-->
-			
-            </div><!--//primary-->
-			
-            <div class="secondary col-lg-4 col-12">
-                 <aside class="info aside section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading" id="Contact_Me" >Contact</h2>					
-                        <div class="content">
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-map-marker-alt"></i><span class="sr-only">Location:</span>Pudukkottai, India</li>
-								<li class="list-inline-item"><a href="mailto:arunprasath_m@srmap.edu.in"><i class="fas fa-envelope"></i></a><span class="sr-only">Email:</span><a href="mailto:arunprasath_m@srmap.edu.in" target="_blank">arunprasath_m@srmap.edu.in</a></li> 																
-								<li class="list-inline-item"><a href="https://www.linkedin.com/in/arunprasathm/" target="_blank"><i class="fab fa-linkedin"></i></a><span class="sr-only">Email:</span><a href="https://www.linkedin.com/in/arunprasathm/" target="_blank">arunprasathm</a></li> 								
-                            </ul>
-                        </div><!--//content-->  
-                    </div><!--//section-inner-->                 
-                </aside><!--//aside-->
-                
-                <aside class="skills aside section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading" id="Skills" >Skills</h2>
-                        <div class="content">
-                            <p class="intro">
-                                I have hands on experienced in the following sets of Software tools. I have used these tools throughout my coursework.</p>
-                            
-                            <div class="skillset">
-                               
-                                <div class="item">
-                                    <h3 class="level-title">Mechanical Softwares</h3>								
-                                    <h3 class="btn btn-cta-primary">SOLIDWORKS &nbsp; <span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="I'm a Certified SolidWorks Professional and I've qualified for CSWE. You can see all my certification on the Licences and Certifications section"><i class="fas fa-info-circle"></i></span></h3>                          
-                                    <h3 class="btn btn-cta-primary">SOLID EDGE &nbsp;<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="I have hands on experience using this tool throughout my coursework. "><i class="fas fa-info-circle"></i></span></h3>                          
-				    <h3 class="btn btn-cta-primary">CATIA &nbsp;<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="I have hands on experience using this tool throughout my coursework. "><i class="fas fa-info-circle"></i></span></h3>                          
-                                    <h3 class="btn btn-cta-primary">3DS MAX &nbsp;<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="I have basic knowledge of using this tool and I'm good at it"><i class="fas fa-info-circle"></i></span></h3>                          									
-                                    <h3 class="btn btn-cta-primary">Hypermesh &nbsp;<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="I have used this tool and I have participated some competitions like Altair AOC India."><i class="fas fa-info-circle"></i></span></h3>                          
-                                    <h3 class="btn btn-cta-primary">Inspire &nbsp;<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="I have used this tool and I have participated some competitions like Altair AOC India."><i class="fas fa-info-circle"></i></span></h3>                          
-                                    <h3 class="btn btn-cta-primary">OPENFOAM &nbsp;<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="I'm having the knowledge of using this tool and I would like to play with this tool."><i class="fas fa-info-circle"></i></span></h3>                          
-                                    <h3 class="btn btn-cta-primary">Ansys WB &nbsp;<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="I have used this tool throughout mu coursework and I used this tool to do my project analysis."><i class="fas fa-info-circle"></i></span></h3>                          
-                                    <h3 class="btn btn-cta-primary">Ansys FLUENT &nbsp;<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="I have used this tool throughout mu coursework and I used this tool to do my project analysis."><i class="fas fa-info-circle"></i></span></h3>                          
-                                    <h3 class="btn btn-cta-primary">Ansys APDL &nbsp;<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="I have used this tool throughout mu coursework and I used this tool to do my project analysis."><i class="fas fa-info-circle"></i></span></h3>                          
-                                    <h3 class="btn btn-cta-primary">ICEM CFD &nbsp;<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="I have used this tool throughout mu coursework and I used this tool to do my project analysis."><i class="fas fa-info-circle"></i></span></h3>                          
-                                    <h3 class="btn btn-cta-primary">BLENDER &nbsp;<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="=I'm having the knowledge of using this tool and I can perform the necessary operations efficiently."><!--i class="fas fa-info-circle"></i--></span></h3>                          
-                                    <h3 class="btn btn-cta-primary">Onshape &nbsp;<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="write"><i class="fas fa-info-circle"></i></span></h3>                          
-                                    <h3 class="btn btn-cta-primary">Matlab &nbsp;<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="I'm having the basic knowledge of using this tool."><i class="fas fa-info-circle"></i></span></h3>                          
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* ======================== +symbol hover box =================== */
+.pointer {
+	cursor: pointer; 
+}
 
-								</div><!--//item-->
-                                
-                                <div class="item">
-                                </div><!--//item-->
-                                
-                                <div class="item">
-                                    <h3 class="level-title">Programming Languages</h3>
-                                    <h3 class="btn btn-cta-secondary">Python 3 &nbsp;<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="write"><!--i class="fas fa-info-circle"></i--></span></h3>                          
-                                    <h3 class="btn btn-cta-secondary">C++&nbsp;<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="write"><!--i class="fas fa-info-circle"></i--></span></h3>                          
-                                    <h3 class="btn btn-cta-secondary">C  Language &nbsp;<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="write"><!--i class="fas fa-info-circle"></i--></span></h3>                          
-                                 
-                                </div><!--//item-->
-                            </div>              
-                        </div><!--//content-->  
-                    </div><!--//section-inner-->                 
-                </aside><!--//section-->
-                
-            <!--    <aside class="testimonials aside section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Testimonials</h2>
-                        <div class="content">
-                            <div class="item">
-                                <blockquote class="quote">                                  
-                                    <p><i class="fas fa-quote-left"></i>James is an excellent software engineer and he is passionate about what he does. You can totally count on him to deliver your projects!</p>
-                                </blockquote>                
-                                <p class="source"><span class="name">Tim Adams</span><br /><span class="title">Curabitur commodo</span></p>                                                             
-                            </div><!--item-->
-                            
-                <!--            <p><a class="more-link" href="#"><i class="fas fa-external-link-alt"></i>More on Linkedin</a></p> 
-             <!--               
-                        </div><!--//content-->
-            <!--         </div><!--//section-inner-->
-             <!--    </aside><!--//section--> 
-                
-                <aside class="education aside section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Education</h2>
-                        <div class="content">
-                            <div class="item">                      
-                                <h3 class="title"><i class="fas fa-graduation-cap"></i> B.Tech.<br /> Mechanical Engineering</h3>							
-                                <h4 class="university">SRM University - AP &nbsp;<span class="year">(8.25 CGPA)</span><br><span class="year">(2017-Present)</span></br></h4>
-                            </div><!--//item-->
-                            <div class="item">
-                                <h3 class="title"><i class="fas fa-graduation-cap"></i> HSC</h3>
-                                <h4 class="university">G.H.S. School, Maramadakki, Tamil Nadu, India &nbsp;<span class="year">( 86.67% )</span><br><span class="year">(2015-2017)</span></br></h4>
-                            </div><!--//item-->
-                            <div class="item">
-                                <h3 class="title"><i class="fas fa-graduation-cap"></i> SSLC</h3>
-                                <h4 class="university">G.H.S. School, Maramadakki, Tamil Nadu, India &nbsp;<span class="year">( 95.2% )</span><br><span class="year">(2015)</span></br></h4>
-                            </div><!--//item-->							
-                        </div><!--//content-->
-                    </div><!--//section-inner-->
-                </aside><!--//section-->
 
-                <aside class="languages aside section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Languages</h2>
-                        <div class="content">
-                            <ul class="list-unstyled">
-                                <li class="item">
-                                    <span class="title"><strong>English:</strong></span>
-                                    <span class="level"style="color:white;">Professional working proficiency <br/  class="year"> </span>
-									<a  class="badge badge-success"  style="color:white;">Read </a>	
-									<a  class="badge badge-warning"  style="color:white;">Speak </a>
-									<a  class="badge badge-info"  style="color:white;">Write </a>									
-                                </li><!--//item-->
-                                <li class="item">
-                                    <span class="title"><strong>Tamil:</strong></span>
-                                    <span class="level">Native <br/  class="year"> </span>
-									<a  class="badge badge-success"  style="color:white;">Read </a>	
-									<a  class="badge badge-warning"  style="color:white;">Speak </a>
-									<a  class="badge badge-info"  style="color:white;">Write </a>									
-                                </li><!--//item-->
-                                <li class="item">
-                                    <span class="title"><strong>Telugu:</strong></span>
-                                    <span class="level">Working proficiency <br/  class="year"> </span>
-									<a  class="badge badge-warning"  style="color:white;">Speak </a>									
-                                </li><!--//item-->								
-                            </ul>
-                        </div><!--//content-->
-                    </div><!--//section-inner-->
-                </aside><!--//section-->
-                
-        <!--         <aside class="blog aside section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Latest Blog Posts</h2>
-                        <p>You can use Sascha Depold's <a href="https://github.com/sdepold/jquery-rss" target="_blank">jQuery RSS plugin</a> to pull in your blog post feeds.</p>
-                        <div id="rss-feeds" class="content">
-                        </div>
-                    </div>
-                </aside>
-                
-                <!--aside class="list music aside section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Favourite coding music</h2>
-                        <div class="content">
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-headphones"></i> <a href="#">Etiam hendrerit urna nunc</a></li>
-                                <li><i class="fas fa-headphones"></i> <a href="#">Ut sollicitudin in mauris non auctor</a></li>
-                                <li><i class="fas fa-headphones"></i> <a href="#">Etiam hendrerit urna nunc</a></li>
-                                <li><i class="fas fa-headphones"></i> <a href="#">Duis et felis bibendum</a></li>
-                            </ul>
-                        </div>
-                   </div>
-               </aside>
-                
-               <aside class="list conferences aside section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Conferences</h2>
-                        <div class="content">
-                            <ul class="list-unstyled">
-                                <li><i class="far fa-calendar-alt"></i> <a href="#" target="_blank">WWDC 2020</a> (San Francisco)</li>
-                                <li><i class="far fa-calendar-alt"></i> <a href="#">Hive</a> (Seattle)</li>
-                            </ul>
-                        </div>
-                    </div>
-                </aside>
-                
-                <aside class="credits aside section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Credits</h2>
-                        <div class="content">
-                            <ul class="list-unstyled pb-2">
-                                <li><a href="https://getbootstrap.com/" target="_blank"><i class="fas fa-external-link-alt"></i>Bootstrap</a></li>
-                                <li><a href="https://fortawesome.github.io/Font-Awesome/" target="_blank"><i class="fas fa-external-link-alt"></i>FontAwesome</a></li>
-                                <li><a href="https://jquery.com/" target="_blank"><i class="fas fa-external-link-alt"></i>jQuery</a></li>
-                                <li><a href="https://github.com/IonicaBizau/github-calendar" target="_blank"><i class="fas fa-external-link-alt"></i>GitHub Calendar Plugin</a></li>
-                                
-                                <li><a href="https://caseyscarborough.com/projects/github-activity/" target="_blank"><i class="fas fa-external-link-alt"></i>GitHub Activity Stream</a></li>
-                                
-                                <li><a href="https://github.com/sdepold/jquery-rss" target="_blank"><i class="fas fa-external-link-alt"></i>jQuery RSS</a></li>
-                                
-                                <li>Profile image: <a href="https://www.flickr.com/photos/dotbenjamin/2577394151" target="_blank">Ben Smith</a></li>
-                            </ul>
-                            
-                            <hr/>
-                            
-                             <p class="pt-2">This Bootstrap 4 portfolio template is handcrafted by UX designer <a href="https://twitter.com/3rdwave_themes" target="_blank">Xiaoying Riley</a> at <a href="https://themes.3rdwavemedia.com/" target="_blank">3rd Wave Media</a> for developers and is <strong>FREE</strong> as long as you keep the footer attribution link.</p>
-                             <p>If you’d like to <strong>use this template without the attribution link</strong>, you can <a href="https://themes.3rdwavemedia.com/bootstrap-templates/resume/free-bootstrap-portfolio-theme-for-web-developers/" target="_blank">buy the commercial license</a>.</p>
-                             
-                             <a class="btn btn-cta-primary btn-download" href="https://themes.3rdwavemedia.com/bootstrap-templates/resume/free-bootstrap-portfolio-theme-for-web-developers/" target="_blank"><i class="fas fa-download"></i> I want to download</a>
-                            <hr/>
-                            <h5 class="subheading pt-3">Want more free Bootstrap themes and templates?</h5>
-                            <p>Check out our <a href="https://themes.3rdwavemedia.com/bootstrap-templates/free/">collection of free themes and templates.</a></p>
-                            <p>Follow <a href="https://twitter.com/3rdwave_themes" target="_blank">Xiaoying</a> on twitter so you don't miss any future freebies!</p> 
-                            
-                            <a class="badge badge-theme btn-follow" href="https://twitter.com/3rdwave_themes" target="_blank">fab fa-twitter"> Follow on twitter</a>
-                            
-                        </div>
-                    </div>
-                </aside>
-              
-            </div><!--//secondary-->    
-        </div><!--//row-->
-    </div><!--//masonry-->
-    
-    <!-- ******FOOTER****** --> 
-    <footer class="footer">
-        <div class="container text-center">
-                <!--/* This template is free as long as you keep the attribution link below. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
-                <small class="copyright">Thanks <a href="https://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a></small><a class="float-right" href="#top"><i class="far fa-arrow-alt-circle-up "></i></a> 
-        </div><!--//container-->
-    </footer><!--//footer-->
- 
-    <!-- Javascript -->       
-	<script src="assets/js/jquery-3.3.1.min.js"></script>	
-    <script type="text/javascript" src="assets/plugins/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/popper.min.js"></script> 
-    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>    
-    <script type="text/javascript" src="assets/plugins/jquery-rss/dist/jquery.rss.min.js"></script> 
-    <!-- github calendar plugin -->
-    <script type="text/javascript" src="assets/plugins/github-calendar/dist/github-calendar.min.js"></script>
-    <!-- github activity plugin -->
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/github-activity/github-activity-0.1.5.min.js"></script>
-    <!-- custom js -->
-    <script type="text/javascript" src="assets/js/main.js"></script>  
-    <script type="text/javascript" src="assets/js/mail-script.js"></script>	
-	<script type="text/javascript" src="assets/js/lightbox-plus-jquery.min.js"></script>
-	<script src="assets/js/contact.js"></script>	
-	<script src="assets/js/script.js"></script>		
-	<script src="assets/js/theme.js"></script>	
-	<script src="assets/js/modal.js"></script>	
-</body>
-</html> 
+.cursors > div {
+    float: left;
+    box-sizing: border-box;
+    background: #f2f2f2;
+    border:1px solid #ccc;
+    width: 20%;
+    padding: 10px 2px;
+    text-align: center;
+    white-space: nowrap;
+    &:nth-child(even) {
+       background: #eee;
+    }
+    &:hover {
+       opacity: 0.25
+    }
+}
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+#parent {
+  display: flex;
+  justify-content: space-around;
+  text-align:center;
+  padding: 10px 2px;  
+}
+
+#left {
+  border: 1px solid #888;
+  background-color: #f5f5f5;
+  width: 20%;
+}
+
+#right {
+  border: 1px solid #888;
+  background-color: #f5f5f5;
+  width: 60%;
+}
